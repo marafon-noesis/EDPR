@@ -1,6 +1,6 @@
 ﻿if (typeof (OrdenTrabajo) == "undefined") { OrdenTrabajo = { __namespace: true }; }
 
-//#region Variables GLOBALES
+//#region Variables GLOBALES a
 var formulario;
 
 //#region Variables GLOBALES
