@@ -1,0 +1,55 @@
+﻿<EntityList>
+  <Attributes>
+    <EntityName>msdyn_warehouse</EntityName>
+    <CamelCase>msdyn_warehouse</CamelCase>
+  </Attributes>
+  <Name>goodsReceiptProduct</Name>
+  <Kind>LookupList</Kind>
+  <AutoWideWidth>0</AutoWideWidth>
+  <OrderBy>msdyn_name</OrderBy>
+  <SerializedBindings>
+    <string>msdyn_warehouseid</string>
+    <string>atos_centroid</string>
+    <string>atos_codigo</string>
+    <string>msdyn_name</string>
+  </SerializedBindings>
+  <MaxColumns>0</MaxColumns>
+  <Fetch version="1.0">
+    <entity name="msdyn_warehouse">
+      <link-entity name="atos_centro" alias="L0" from="atos_centroid" to="atos_centroid" link-type="inner">
+        <link-entity name="atos_sociedad" alias="L1" from="atos_centroid" to="atos_centroid" link-type="inner">
+          <link-entity name="msdyn_purchaseorder" alias="L2" from="edprdyn_companycode" to="atos_sociedadid" link-type="inner"/>
+        </link-entity>
+      </link-entity>
+    </entity>
+  </Fetch>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>320</DesignWidth>
+      <DesignHeight>48</DesignHeight>
+      <Name>Default</Name>
+      <Width>320</Width>
+      <Height>48</Height>
+      <SerializedChildren>
+        <CellTemplate SchemaName="msdyn_name">
+          <StyleName>primary</StyleName>
+          <Bounds>10,2,302,28</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="atos_codigo">
+          <StyleName>gray</StyleName>
+          <Bounds>10,31,146,13</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="atos_centroid">
+          <StyleName>r_gray</StyleName>
+          <Bounds>157,31,152,13</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+</EntityList>

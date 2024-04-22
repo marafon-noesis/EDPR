@@ -1,0 +1,47 @@
+﻿<EntityList>
+  <Attributes>
+    <EntityName>edprdyn_purchaseorderservice</EntityName>
+    <CamelCase>edprdyn_purchaseorderservice</CamelCase>
+  </Attributes>
+  <Name>Default</Name>
+  <Kind>List</Kind>
+  <AutoWideWidth>0</AutoWideWidth>
+  <OrderBy>edprdyn_name</OrderBy>
+  <SerializedBindings>
+    <string>edprdyn_itemnumber</string>
+    <string>edprdyn_name</string>
+    <string>edprdyn_purchaseorderserviceid</string>
+    <string>edprdyn_quantity</string>
+    <string>edprdyn_serviceedpr</string>
+  </SerializedBindings>
+  <MaxColumns>0</MaxColumns>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>320</DesignWidth>
+      <DesignHeight>48</DesignHeight>
+      <Name>Default</Name>
+      <Width>320</Width>
+      <Height>48</Height>
+      <SerializedChildren>
+        <CellTemplate SchemaName="edprdyn_itemnumber">
+          <StyleName>primary</StyleName>
+          <Bounds>10,2,300,28</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="edprdyn_serviceedpr">
+          <StyleName>gray</StyleName>
+          <Bounds>10,31,224,13</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="edprdyn_quantity">
+          <StyleName>r_gray</StyleName>
+          <Bounds>234,31,77,13</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+</EntityList>

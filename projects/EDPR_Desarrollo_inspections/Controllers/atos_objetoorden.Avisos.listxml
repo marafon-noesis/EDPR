@@ -1,0 +1,83 @@
+﻿<EntityList>
+  <Attributes>
+    <EntityName>atos_objetoorden</EntityName>
+    <CamelCase>atos_objetoorden</CamelCase>
+  </Attributes>
+  <Name>Avisos</Name>
+  <Kind>AssociatedList</Kind>
+  <AutoWideWidth>0</AutoWideWidth>
+  <OrderBy>atos_avisoid</OrderBy>
+  <SerializedBindings>
+    <string>atos_avisoid</string>
+    <string>atos_objetoordenid</string>
+    <string>atos_avisoid.atos_aviso.atos_clasedeavisoid</string>
+    <string>atos_avisoid.atos_aviso.atos_esprincipal</string>
+    <string>atos_avisoid.atos_aviso.atos_fechafinaveria</string>
+    <string>atos_avisoid.atos_aviso.atos_fechainicioaveria</string>
+    <string>atos_avisoid.atos_aviso.atos_fechanotificacion</string>
+    <string>atos_avisoid.atos_aviso.atos_prioridadid</string>
+    <string>atos_avisoid.atos_aviso.atos_ubicaciontecnicaid</string>
+  </SerializedBindings>
+  <MaxColumns>0</MaxColumns>
+  <Fetch version="1.0">
+    <entity name="atos_objetoorden">
+      <filter type="and">
+        <condition attribute="atos_avisoid" operator="not-null"/>
+        <condition attribute="statecode" operator="eq" value="0"/>
+      </filter>
+    </entity>
+  </Fetch>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>240</DesignWidth>
+      <DesignHeight>40</DesignHeight>
+      <Name>Default</Name>
+      <Width>240</Width>
+      <Height>73</Height>
+      <SerializedChildren>
+        <CellTemplate SchemaName="atos_avisoid">
+          <StyleName>primary</StyleName>
+          <Bounds>8,2,227,24</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="atos_avisoid.atos_aviso.atos_ubicaciontecnicaid">
+          <StyleName>gray</StyleName>
+          <Bounds>8,26,227,11</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="atos_avisoid.atos_aviso.atos_fechanotificacion">
+          <StyleName>gray</StyleName>
+          <Bounds>8,37,227,11</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="atos_avisoid.atos_aviso.atos_fechainicioaveria">
+          <StyleName>gray</StyleName>
+          <Bounds>8,48,112.5,11</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="atos_avisoid.atos_aviso.atos_fechafinaveria">
+          <StyleName>gray</StyleName>
+          <Bounds>120.5,48,114.5,11</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="atos_avisoid.atos_aviso.atos_clasedeavisoid">
+          <StyleName>gray</StyleName>
+          <Bounds>8,59,90,11</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="atos_avisoid.atos_aviso.atos_esprincipal">
+          <StyleName>gray</StyleName>
+          <Bounds>98,59,137,11</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+</EntityList>

@@ -1,0 +1,6 @@
+﻿#GPS;off
+#LogSync;on
+#LogAppState;off
+#TrackGpsChanges;off;600;500
+atos_aviso;create|update|delete|startedit|endedit
+msdyn_workorder;create|update|delete|startedit|endedit

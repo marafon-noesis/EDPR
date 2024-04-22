@@ -1,0 +1,77 @@
+﻿<EntityList>
+  <Attributes>
+    <EntityName>atos_tiempoinactividad</EntityName>
+    <CamelCase>atos_tiempoinactividad</CamelCase>
+  </Attributes>
+  <Name>Tiempos de inacticidad activos</Name>
+  <Kind>List</Kind>
+  <AutoWideWidth>0</AutoWideWidth>
+  <OrderBy>atos_name</OrderBy>
+  <MultiSelectCommands>Delete|||custom_clonar|custom_clonarIT|</MultiSelectCommands>
+  <SerializedBindings>
+    <string>atos_avisoid</string>
+    <string>atos_coste</string>
+    <string>atos_energia</string>
+    <string>atos_fechafin</string>
+    <string>atos_fechainicio</string>
+    <string>atos_flag</string>
+    <string>atos_horastotalesinactividad</string>
+    <string>atos_indicadorordenmantenimiento</string>
+    <string>atos_noparada</string>
+    <string>atos_name</string>
+    <string>atos_ordendetrabajoid</string>
+    <string>atos_origen</string>
+    <string>atos_tiempoinactividadpuestaenmarcha</string>
+    <string>atos_tiempoinactividadid</string>
+    <string>atos_ubicaciontecnicaid</string>
+  </SerializedBindings>
+  <MaxColumns>0</MaxColumns>
+  <IFrame>file://TiemposInactividad/TiempoInactividadList.html</IFrame>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>320</DesignWidth>
+      <DesignHeight>48</DesignHeight>
+      <Name>Default</Name>
+      <Width>320</Width>
+      <Height>53</Height>
+      <SerializedChildren>
+        <CellTemplate SchemaName="atos_ubicaciontecnicaid">
+          <StyleName>primary</StyleName>
+          <Bounds>8,2,304,17</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="atos_fechafin">
+          <StyleName>gray</StyleName>
+          <Bounds>124,18,116,17</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="atos_fechainicio">
+          <StyleName>gray</StyleName>
+          <Bounds>8,18,116,17</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="atos_horastotalesinactividad">
+          <StyleName>gray</StyleName>
+          <Bounds>241,18,71,17</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="atos_energia">
+          <StyleName>gray</StyleName>
+          <Bounds>8,34,116,17</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="atos_coste">
+          <StyleName>gray</StyleName>
+          <Bounds>125,35,101,17</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+</EntityList>

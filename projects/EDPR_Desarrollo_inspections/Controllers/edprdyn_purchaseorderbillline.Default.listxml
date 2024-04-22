@@ -1,0 +1,54 @@
+﻿<EntityList>
+  <Attributes>
+    <EntityName>edprdyn_purchaseorderbillline</EntityName>
+    <CamelCase>edprdyn_purchaseorderbillline</CamelCase>
+  </Attributes>
+  <Name>Default</Name>
+  <Kind>List</Kind>
+  <AutoWideWidth>0</AutoWideWidth>
+  <OrderBy>edprdyn_name</OrderBy>
+  <SerializedBindings>
+    <string>edprdyn_sapdocument</string>
+    <string>edprdyn_name</string>
+    <string>edprdyn_purchaseorder</string>
+    <string>edprdyn_purchaseorderproduct</string>
+    <string>edprdyn_purchaseorderbilllineid</string>
+    <string>edprdyn_purchaseorderservice</string>
+  </SerializedBindings>
+  <MaxColumns>0</MaxColumns>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>320</DesignWidth>
+      <DesignHeight>48</DesignHeight>
+      <Name>Default</Name>
+      <Width>320</Width>
+      <Height>48</Height>
+      <SerializedChildren>
+        <CellTemplate SchemaName="edprdyn_name">
+          <StyleName>primary</StyleName>
+          <Bounds>10,2,189,28</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="edprdyn_sapdocument">
+          <StyleName>primary</StyleName>
+          <Bounds>200,2,112,28</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="edprdyn_purchaseorderproduct">
+          <StyleName>gray</StyleName>
+          <Bounds>10,31,190,13</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="edprdyn_purchaseorderservice">
+          <StyleName>r_gray</StyleName>
+          <Bounds>201,31,110,13</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+</EntityList>

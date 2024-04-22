@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="www.w3.org/.../xhtml&quot;>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Empty Offline HTML page</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="initial-scale=1, user-scalable=no" />
+    <script src="../../JSBridge.js"></script>
+</head>
+
+<body onload="onLoad()">
+
+    <script>
+
+        function onLoad() {
+
+
+
+
+            try {
+
+                MobileCRM.UI.EntityForm.onCommand("custom_sendToSap",
+                    function (entityForm) {
+                        if (entityForm)
+                            MobileCRM.UI.EntityForm.saveAndClose();
+                    }
+                );
+            }
+            catch (e) {
+                throw new MobileCrmException("custom_sendToSap" + e.message);
+            }
+
+            try {
+
+                MobileCRM.UI.EntityForm.onChange(
+                    function (entityForm) {
+                        // First check whether the change handler is called due to desired item change
+                        var changedItem = entityForm.context.changedItem;
+                        if (changedItem == "edprdyn_acceptanceindicator" || changedItem == "edprdyn_acceptanceindicator") {
+                            MobileCRM.UI.EntityForm.save();
+                        }
+                    },
+                    true,
+                    null
+                );
+            }
+            catch (e) {
+                throw new MobileCrmException("onChange edprdyn_acceptanceindicator" + e.message);
+            }
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,19 @@
+﻿<EntityForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:dummy="0" flexi="0" fleximode="1" fullscreen="0" resize="0" version="2">
+  <IsContactForm>false</IsContactForm>
+  <EntityName>atos_historicoestadoherramienta</EntityName>
+  <CamelCase>atos_historicoestadoherramienta</CamelCase>
+  <PrimaryCommands>!defcmd</PrimaryCommands>
+  <EnabledWorkflows>OnLoadEnabled OnChangeEnabled OnSaveEnabled OnExecuteCommand OnCanExecuteCommand OnExecuteButton</EnabledWorkflows>
+  <SerializedChildrenV2>
+    <FormTab xsi:type="DetailTab" NameModified="0" EntityIconName="" IsIconNameReadOnly="0">
+      <Name>General</Name>
+      <SerializedChildren>
+        <DetailItem SchemaName="atos_name"/>
+        <DetailItem SchemaName="atos_herramientaid"/>
+        <DetailItem SchemaName="atos_estadodelaherramienta"/>
+        <DetailItem SchemaName="atos_fecha"/>
+        <DetailItem SchemaName="atos_usuarioid"/>
+      </SerializedChildren>
+    </FormTab>
+  </SerializedChildrenV2>
+</EntityForm>

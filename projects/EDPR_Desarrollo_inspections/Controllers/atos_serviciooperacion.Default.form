@@ -1,0 +1,41 @@
+﻿<EntityForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:dummy="0" flexi="0" fleximode="1" fullscreen="0" resize="0" version="2">
+  <IsContactForm>false</IsContactForm>
+  <EntityName>atos_serviciooperacion</EntityName>
+  <CamelCase>atos_serviciooperacion</CamelCase>
+  <PrimaryCommands>!defcmd</PrimaryCommands>
+  <ClassBinding/>
+  <EnabledWorkflows>OnLoadEnabled OnChangeEnabled OnSaveEnabled OnExecuteCommand OnCanExecuteCommand</EnabledWorkflows>
+  <SerializedChildrenV2>
+    <FormTab xsi:type="DetailTab" flexiHeader="0">
+      <Name>General</Name>
+      <SerializedChildren>
+        <DetailItem SchemaName="atos_ordendetrabajoid">
+          <LookupViews>&lt;extra&gt;&lt;actions&gt;0;;0&lt;/actions&gt;&lt;/extra&gt;</LookupViews>
+        </DetailItem>
+        <DetailItem SchemaName="atos_operacionid">
+          <LookupViews>&lt;extra&gt;&lt;actions&gt;0;;0&lt;/actions&gt;&lt;filter entity="msdyn_workorderservicetask"&gt;&amp;lt;fetch version="1.0"&amp;gt;&amp;lt;entity name="msdyn_workorderservicetask"&amp;gt;&amp;lt;link-entity name="msdyn_workorder" alias="L0" from="msdyn_workorderid" to="msdyn_workorder" link-type="inner"&amp;gt;&amp;lt;filter type="and"&amp;gt;&amp;lt;condition attribute="msdyn_workorderid" operator="eq" value="{{atos_ordendetrabajoid}}"/&amp;gt;&amp;lt;/filter&amp;gt;&amp;lt;/link-entity&amp;gt;&amp;lt;/entity&amp;gt;&amp;lt;/fetch&amp;gt;&lt;/filter&gt;&lt;/extra&gt;</LookupViews>
+        </DetailItem>
+        <DetailItem SchemaName="atos_name"/>
+        <DetailItem SchemaName="atos_posicion"/>
+        <DetailItem SchemaName="atos_servicioid">
+          <LookupViews>&lt;extra&gt;&lt;actions&gt;0;;0&lt;/actions&gt;&lt;filter entity="atos_servicio"&gt;&amp;lt;fetch version="1.0"&amp;gt;&amp;lt;entity name="atos_servicio"&amp;gt;&amp;lt;link-entity name="atos_servicioporplanta" alias="ad" from="atos_servicioedprid" to="atos_servicioid" link-type="inner"&amp;gt;&amp;lt;link-entity name="atos_centrodeemplazamiento" alias="ae" from="atos_centrodeemplazamientoid" to="atos_centrodeemplazamientoid" link-type="inner"&amp;gt;&amp;lt;link-entity name="atos_centrodeplanificacion" alias="af" from="atos_emplazamientoid" to="atos_centrodeemplazamientoid" link-type="inner"&amp;gt;&amp;lt;link-entity name="msdyn_workorderservicetask" alias="L0" from="atos_centroplanificacionid" to="atos_centrodeplanificacionid" link-type="inner"&amp;gt;&amp;lt;filter type="and"&amp;gt;&amp;lt;condition attribute="msdyn_workorder" operator="eq" value="{{atos_ordendetrabajoid}}"/&amp;gt;&amp;lt;/filter&amp;gt;&amp;lt;/link-entity&amp;gt;&amp;lt;/link-entity&amp;gt;&amp;lt;/link-entity&amp;gt;&amp;lt;/link-entity&amp;gt;&amp;lt;/entity&amp;gt;&amp;lt;/fetch&amp;gt;&lt;/filter&gt;&lt;/extra&gt;</LookupViews>
+        </DetailItem>
+        <DetailItem SchemaName="atos_indicadorborrado"/>
+        <DetailItem SchemaName="atos_textobreve"/>
+        <DetailItem SchemaName="atos_cantidad"/>
+        <DetailItem SchemaName="atos_unidadmedidaid">
+          <LookupViews>&lt;extra&gt;&lt;actions&gt;0;;0&lt;/actions&gt;&lt;/extra&gt;</LookupViews>
+        </DetailItem>
+        <DetailItem SchemaName="atos_precio"/>
+        <DetailItem SchemaName="atos_clasedecosteid">
+          <LookupViews>&lt;extra&gt;&lt;actions&gt;0;;0&lt;/actions&gt;&lt;/extra&gt;</LookupViews>
+        </DetailItem>
+      </SerializedChildren>
+    </FormTab>
+    <FormTab xsi:type="IFrameTab">
+      <Name>Web</Name>
+      <Url>file://ServicioOperacion/ServicioOperacion.html</Url>
+      <IsVisible>false</IsVisible>
+    </FormTab>
+  </SerializedChildrenV2>
+</EntityForm>

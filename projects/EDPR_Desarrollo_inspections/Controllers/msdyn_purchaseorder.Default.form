@@ -1,0 +1,57 @@
+﻿<EntityForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:dummy="0" flexi="0" fleximode="1" fullscreen="0" resize="0" version="2">
+  <IsContactForm>false</IsContactForm>
+  <EntityName>msdyn_purchaseorder</EntityName>
+  <CamelCase>msdyn_purchaseorder</CamelCase>
+  <PrimaryCommands>!defcmd</PrimaryCommands>
+  <EnabledWorkflows>OnLoadEnabled OnChangeEnabled OnSaveEnabled OnExecuteCommand OnCanExecuteCommand OnExecuteButton</EnabledWorkflows>
+  <SerializedChildrenV2>
+    <FormTab xsi:type="DetailTab" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
+      <Name>General</Name>
+      <SerializedChildren>
+        <DetailItem SchemaName="msdyn_name"/>
+        <DetailItem SchemaName="edprdyn_companycode"/>
+        <DetailItem SchemaName="edprdyn_type"/>
+        <DetailItem SchemaName="edprdyn_purchasinggroup"/>
+        <DetailItem SchemaName="edprdyn_proveedorid"/>
+        <DetailItem SchemaName="edprdyn_purchasinggroup"/>
+        <DetailItem SchemaName="msdyn_substatus"/>
+        <DetailItem SchemaName="edprdyn_typeid"/>
+        <DetailItem SchemaName="msdyn_workorder"/>
+        <DetailItem SchemaName="edprdyn_approvedbysapuser"/>
+        <DetailItem SchemaName="msdyn_purchaseorderdate"/>
+        <DetailItem SchemaName="edprdyn_documentlocalsystem"/>
+        <DetailItem SchemaName="transactioncurrencyid"/>
+        <DetailItem SchemaName="createdby"/>
+      </SerializedChildren>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
+      <Name>Productos de pedido de compra List</Name>
+      <Binding SchemaName="msdyn_purchaseorderproduct.msdyn_purchaseorder"/>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
+      <Name>Servicios de pedidos de compra List</Name>
+      <Binding SchemaName="edprdyn_purchaseorderservice.edprdyn_purchaseorderid"/>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0" DocCommands="0">
+      <Name>Servicios de pedidos de productos List</Name>
+      <Binding SchemaName="edprdyn_productorderservice.edprdyn_purchaseorder"/>
+      <Views>edprdyn_productorderservice.PO List</Views>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
+      <Name>Documentos SAP List</Name>
+      <Binding SchemaName="edprdyn_goodsmovementdocument.edprdyn_purchaseorder"/>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
+      <Name>Recibos de pedido de compra List</Name>
+      <Binding SchemaName="msdyn_purchaseorderreceipt.msdyn_purchaseorder"/>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
+      <Name>Hojas de servicios List</Name>
+      <Binding SchemaName="edprdyn_servicesheet.edprdyn_purchaseorder"/>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
+      <Name>Facturas de pedido de compra List</Name>
+      <Binding SchemaName="msdyn_purchaseorderbill.msdyn_purchaseorder"/>
+    </FormTab>
+  </SerializedChildrenV2>
+</EntityForm>

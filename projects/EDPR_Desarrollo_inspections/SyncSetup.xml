@@ -1,0 +1,16 @@
+﻿<SESetup Version='1'> 
+ <SyncDownloaderSetup> 
+  <Setup Platform='android' DownloadCacheSize='1000' NumDownloadThreads='5'> 
+   <Entities> 
+    <Entity Name='atos_codigos' DownloadPageSize='2000' HasPriority='true' /> 
+    <Entity Name='account' DownloadPageSize='500' /> 
+   </Entities> 
+  </Setup> 
+   <Setup Platform='Desktop WinRT WinUWP ios' DownloadCacheSize='1000' NumDownloadThreads='3'> 
+   <Entities> 
+    <Entity Name='atos_codigos' DownloadPageSize='500' HasPriority='true' /> 
+    <Entity Name='account' DownloadPageSize='500' /> 
+   </Entities> 
+  </Setup> 
+ </SyncDownloaderSetup>
+</SESetup>

@@ -1,0 +1,54 @@
+﻿<EntityList>
+  <Attributes>
+    <EntityName>atos_movimientodeherramientas</EntityName>
+    <CamelCase>atos_movimientodeherramientas</CamelCase>
+  </Attributes>
+  <Name>Default</Name>
+  <Kind>List</Kind>
+  <AutoWideWidth>0</AutoWideWidth>
+  <OrderBy>atos_name</OrderBy>
+  <SerializedBindings>
+    <string>atos_fecha</string>
+    <string>atos_movimientodeherramientasid</string>
+    <string>atos_name</string>
+    <string>atos_ordendetrabajoid</string>
+    <string>atos_tipodemovimiento</string>
+    <string>atos_usuarioid</string>
+  </SerializedBindings>
+  <MaxColumns>0</MaxColumns>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>320</DesignWidth>
+      <DesignHeight>48</DesignHeight>
+      <Name>Default</Name>
+      <Width>320</Width>
+      <Height>48</Height>
+      <SerializedChildren>
+        <CellTemplate SchemaName="atos_tipodemovimiento">
+          <StyleName>primary</StyleName>
+          <Bounds>10,2,302,28</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="atos_fecha">
+          <StyleName>gray</StyleName>
+          <Bounds>10,31,95,13</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="atos_usuarioid">
+          <StyleName>gray</StyleName>
+          <Bounds>106,31,118,13</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>8</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="atos_ordendetrabajoid">
+          <StyleName>r_gray</StyleName>
+          <Bounds>224,31,89,13</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>8</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+</EntityList>

@@ -1,0 +1,42 @@
+﻿<EntityForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:dummy="0" flexi="0" fleximode="1" fullscreen="0" resize="0" version="2">
+  <IsContactForm>false</IsContactForm>
+  <EntityName>msdyn_purchaseorderproduct</EntityName>
+  <CamelCase>msdyn_purchaseorderproduct</CamelCase>
+  <PrimaryCommands>!defcmd</PrimaryCommands>
+  <EnabledWorkflows>OnLoadEnabled OnChangeEnabled OnSaveEnabled OnExecuteCommand OnCanExecuteCommand OnExecuteButton</EnabledWorkflows>
+  <SerializedChildrenV2>
+    <FormTab xsi:type="DetailTab" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
+      <Name>General</Name>
+      <SerializedChildren>
+        <DetailItem SchemaName="msdyn_name"/>
+        <DetailItem SchemaName="msdyn_quantity"/>
+        <DetailItem SchemaName="msdyn_description"/>
+        <DetailItem SchemaName="msdyn_qtyreceived"/>
+        <DetailItem SchemaName="msdyn_qtybilled"/>
+        <DetailItem SchemaName="msdyn_purchaseorder"/>
+        <DetailItem SchemaName="msdyn_product"/>
+        <DetailItem SchemaName="msdyn_unitcost"/>
+        <DetailItem SchemaName="msdyn_totalcost_base"/>
+        <DetailItem SchemaName="edprdyn_plant"/>
+        <DetailItem SchemaName="edprdyn_materialgroupid"/>
+        <DetailItem SchemaName="edprdyn_finaldeliveryindicator"/>
+        <DetailItem SchemaName="edprdyn_deliverydatetime"/>
+        <DetailItem SchemaName="edprdyn_packagenumber"/>
+        <DetailItem SchemaName="edprdyn_finalinvoiceindicator"/>
+        <DetailItem separator="true" xsi:type="SeparatorDetailItem">
+          <IsConstant>true</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="msdyn_associatetowarehouse"/>
+        <DetailItem SchemaName="edprdyn_agreementnumber"/>
+        <DetailItem SchemaName="msdyn_associatetoworkorder"/>
+        <DetailItem SchemaName="edprdyn_purchaserequisitionnumber"/>
+        <DetailItem SchemaName="edprdyn_purchaserequisitionitemnumber"/>
+        <DetailItem SchemaName="edprdyn_measureunit"/>
+        <DetailItem SchemaName="edprdyn_itemcategoryid"/>
+        <DetailItem SchemaName="edprdyn_requestername"/>
+        <DetailItem SchemaName="edprdyn_valuationtypeid"/>
+        <DetailItem SchemaName="edprdyn_company"/>
+      </SerializedChildren>
+    </FormTab>
+  </SerializedChildrenV2>
+</EntityForm>

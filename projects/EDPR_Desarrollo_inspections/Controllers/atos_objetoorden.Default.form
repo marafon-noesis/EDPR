@@ -1,0 +1,110 @@
+﻿<EntityForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:dummy="0" flexi="0" fleximode="1" fullscreen="0" resize="0" version="2">
+  <IsContactForm>false</IsContactForm>
+  <EntityName>atos_objetoorden</EntityName>
+  <CamelCase>atos_objetoorden</CamelCase>
+  <WorkflowLoad>&lt;?xml version="1.0" ?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="11" version="0"&gt;&lt;branch e="true" info="" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.IsNew&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Form.atos_numerodeserie.IsEnabled&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Form.atos_materialid.IsEnabled&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Form.atos_equipoid.IsEnabled&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Form.atos_ubicaciontecnicaid.IsEnabled&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Form.atos_avisoid.IsEnabled&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Form.atos_numerodeserie.IsEnabled&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Form.atos_materialid.IsEnabled&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Form.atos_equipoid.IsEnabled&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:True&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Form.atos_ubicaciontecnicaid.IsEnabled&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:True&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Form.atos_avisoid.IsEnabled&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:True&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;definition e="false"&gt;&lt;var&gt;Ubicacion&lt;/var&gt;&lt;func&gt;LoadFetch&lt;/func&gt;&lt;type&gt;Entity&lt;/type&gt;&lt;arg&gt;String:account&lt;/arg&gt;&lt;arg&gt;Fetch:&amp;lt;fetch version=&amp;quot;1.0&amp;quot;&amp;gt;&amp;lt;entity name=&amp;quot;account&amp;quot;&amp;gt;&amp;lt;link-entity name=&amp;quot;msdyn_workorder&amp;quot; alias=&amp;quot;L0&amp;quot; from=&amp;quot;msdyn_serviceaccount&amp;quot; to=&amp;quot;accountid&amp;quot; link-type=&amp;quot;inner&amp;quot;&amp;gt;&amp;lt;filter type=&amp;quot;and&amp;quot;&amp;gt;&amp;lt;condition attribute=&amp;quot;msdyn_workorderid&amp;quot; operator=&amp;quot;eq&amp;quot; value=&amp;quot;{{Entity.atos_ordendetrabajoid}}&amp;quot;/&amp;gt;&amp;lt;/filter&amp;gt;&amp;lt;/link-entity&amp;gt;&amp;lt;/entity&amp;gt;&amp;lt;/fetch&amp;gt;&lt;/arg&gt;&lt;/definition&gt;&lt;function e="false"&gt;&lt;var&gt;Shared.UTSeleccionada&lt;/var&gt;&lt;func&gt;SubString&lt;/func&gt;&lt;arg&gt;var:Ubicacion.name&lt;/arg&gt;&lt;arg&gt;Integer:0&lt;/arg&gt;&lt;arg&gt;Integer:16&lt;/arg&gt;&lt;/function&gt;&lt;definition e="false"&gt;&lt;var&gt;CentroSeleccionadoTmp&lt;/var&gt;&lt;func&gt;LoadFetch&lt;/func&gt;&lt;type&gt;Entity&lt;/type&gt;&lt;arg&gt;String:atos_centrodeemplazamiento&lt;/arg&gt;&lt;arg&gt;Fetch:&amp;lt;fetch version=&amp;quot;1.0&amp;quot;&amp;gt;&amp;lt;entity name=&amp;quot;atos_centrodeemplazamiento&amp;quot;&amp;gt;&amp;lt;link-entity name=&amp;quot;msdyn_workorder&amp;quot; alias=&amp;quot;L0&amp;quot; from=&amp;quot;atos_centrodeemplazamientoid&amp;quot; to=&amp;quot;atos_centrodeemplazamientoid&amp;quot; link-type=&amp;quot;inner&amp;quot;&amp;gt;&amp;lt;filter type=&amp;quot;and&amp;quot;&amp;gt;&amp;lt;condition attribute=&amp;quot;msdyn_workorderid&amp;quot; operator=&amp;quot;eq&amp;quot; value=&amp;quot;{{Entity.atos_ordendetrabajoid}}&amp;quot;/&amp;gt;&amp;lt;/filter&amp;gt;&amp;lt;/link-entity&amp;gt;&amp;lt;/entity&amp;gt;&amp;lt;/fetch&amp;gt;&lt;/arg&gt;&lt;/definition&gt;&lt;function e="false"&gt;&lt;var&gt;Shared.CentroEmplazamiento.@this&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;var:CentroSeleccionadoTmp.@this&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Form.atos_numerodeserie.IsEnabled&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Form.atos_materialid.IsEnabled&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;/function&gt;&lt;/Workflow&gt;</WorkflowLoad>
+  <WorkflowItemChanged>&lt;?xml version="1.0" ?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="11" version="0"&gt;&lt;definition e="false"&gt;&lt;var&gt;UTtmp&lt;/var&gt;&lt;func&gt;LoadFetch&lt;/func&gt;&lt;type&gt;Entity&lt;/type&gt;&lt;arg&gt;String:account&lt;/arg&gt;&lt;arg&gt;Fetch:&amp;lt;fetch version=&amp;quot;1.0&amp;quot;&amp;gt;&amp;lt;entity name=&amp;quot;account&amp;quot;&amp;gt;&amp;lt;filter type=&amp;quot;and&amp;quot;&amp;gt;&amp;lt;condition attribute=&amp;quot;accountid&amp;quot; operator=&amp;quot;eq&amp;quot; value=&amp;quot;{{Entity.atos_ubicaciontecnicaid}}&amp;quot;/&amp;gt;&amp;lt;/filter&amp;gt;&amp;lt;/entity&amp;gt;&amp;lt;/fetch&amp;gt;&lt;/arg&gt;&lt;/definition&gt;&lt;branch e="false" info="filtrado de UT" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;UTtmp.@this&lt;/var&gt;&lt;op&gt;ContainsData&lt;/op&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Shared.UT.name&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;var:UTtmp.name&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Shared.UT.name&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;String:0&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/Workflow&gt;</WorkflowItemChanged>
+  <SharedVariables>&lt;SharedVariables&gt;&lt;Variables&gt;&lt;SharedVariable usage="OnChangeEnabled"&gt;&lt;Name&gt;UT&lt;/Name&gt;&lt;CrmType&gt;Entity&lt;/CrmType&gt;&lt;InnerType&gt;account&lt;/InnerType&gt;&lt;/SharedVariable&gt;&lt;SharedVariable usage="OnLoadEnabled"&gt;&lt;Name&gt;UTSeleccionada&lt;/Name&gt;&lt;CrmType&gt;String&lt;/CrmType&gt;&lt;/SharedVariable&gt;&lt;SharedVariable usage="OnLoadEnabled"&gt;&lt;Name&gt;CentroEmplazamiento&lt;/Name&gt;&lt;CrmType&gt;Entity&lt;/CrmType&gt;&lt;InnerType&gt;atos_centrodeemplazamiento&lt;/InnerType&gt;&lt;/SharedVariable&gt;&lt;/Variables&gt;&lt;/SharedVariables&gt;</SharedVariables>
+  <PrimaryCommands>custom_delete|Cmd.Delete||Favorite|||EmailLink||</PrimaryCommands>
+  <SharedVariableNames>
+    <string>UT.accountid</string>
+    <string>UT.address1_city</string>
+    <string>UT.address1_country</string>
+    <string>UT.address1_latitude</string>
+    <string>UT.address1_line1</string>
+    <string>UT.address1_line2</string>
+    <string>UT.address1_line3</string>
+    <string>UT.address1_longitude</string>
+    <string>UT.address1_name</string>
+    <string>UT.address1_postalcode</string>
+    <string>UT.address1_stateorprovince</string>
+    <string>UT.address2_addresstypecode</string>
+    <string>UT.address2_latitude</string>
+    <string>UT.address2_longitude</string>
+    <string>UT.atos_aniocontruccionequipo</string>
+    <string>UT.atos_centrodecosteid</string>
+    <string>UT.atos_centrodeemplazamientoid</string>
+    <string>UT.atos_centrodeplanificacionid</string>
+    <string>UT.atos_centroid</string>
+    <string>UT.atos_claseid</string>
+    <string>UT.atos_creadoensap</string>
+    <string>UT.atos_creadoporsap</string>
+    <string>UT.atos_denominacion</string>
+    <string>UT.atos_equipoinstalado</string>
+    <string>UT.atos_fabricante</string>
+    <string>UT.atos_grupoplanificadorid</string>
+    <string>UT.atos_heredargarantia</string>
+    <string>UT.atos_herenciagarantia</string>
+    <string>UT.atos_indicadorabcid</string>
+    <string>UT.atos_modelo</string>
+    <string>UT.atos_modificadoensap</string>
+    <string>UT.atos_modificadoporsap</string>
+    <string>UT.atos_name_en</string>
+    <string>UT.atos_name_es</string>
+    <string>UT.atos_nombredireccionparque</string>
+    <string>UT.atos_numeroequiposinstalados</string>
+    <string>UT.atos_perfildecatalogoid</string>
+    <string>UT.atos_puestodetrabajoresponsableid</string>
+    <string>UT.atos_sociedadcoid</string>
+    <string>UT.atos_sociedadid</string>
+    <string>UT.businesstypecode</string>
+    <string>UT.createdon</string>
+    <string>UT.defaultpricelevelid</string>
+    <string>UT.description</string>
+    <string>UT.emailaddress1</string>
+    <string>UT.fax</string>
+    <string>UT.modifiedon</string>
+    <string>UT.msdyn_billingaccount</string>
+    <string>UT.msdyn_salestaxcode</string>
+    <string>UT.msdyn_serviceterritory</string>
+    <string>UT.msdyn_taxexempt</string>
+    <string>UT.msdyn_workorderinstructions</string>
+    <string>UT.name</string>
+    <string>UT.ownerid</string>
+    <string>UT.parentaccountid</string>
+    <string>UT.preferredequipmentid</string>
+    <string>UT.primarycontactid</string>
+    <string>UT.statuscode</string>
+    <string>UT.telephone1</string>
+    <string>UT.transactioncurrencyid</string>
+    <string>UT.websiteurl</string>
+    <string>UTSeleccionada</string>
+    <string>CentroEmplazamiento.atos_centrodeemplazamientoid</string>
+    <string>CentroEmplazamiento.atos_centroid</string>
+    <string>CentroEmplazamiento.atos_codigo</string>
+    <string>CentroEmplazamiento.atos_descripcion</string>
+    <string>CentroEmplazamiento.atos_name</string>
+    <string>CentroEmplazamiento.atos_name_en</string>
+    <string>CentroEmplazamiento.atos_name_es</string>
+    <string>CentroEmplazamiento.createdon</string>
+    <string>CentroEmplazamiento.modifiedon</string>
+    <string>CentroEmplazamiento.ownerid</string>
+  </SharedVariableNames>
+  <ClassBinding/>
+  <EnabledWorkflows>OnLoadEnabled OnChangeEnabled OnSaveEnabled OnExecuteCommand OnCanExecuteCommand</EnabledWorkflows>
+  <SerializedChildrenV2>
+    <FormTab xsi:type="DetailTab">
+      <Name>General</Name>
+      <SerializedChildren>
+        <DetailItem SchemaName="atos_numerodeserie"/>
+        <DetailItem SchemaName="atos_materialid">
+          <LookupViews>&lt;lookup&gt;&lt;extra/&gt;&lt;extra&gt;&lt;filter entity="product"&gt;&amp;lt;fetch version="1.0"&amp;gt;&amp;lt;entity name="product"&amp;gt;&amp;lt;filter type="and"&amp;gt;&amp;lt;condition attribute="statecode" operator="ne" value="1"/&amp;gt;&amp;lt;/filter&amp;gt;&amp;lt;link-entity name="atos_materialenplanta" alias="L0" from="atos_materialid" to="productid" link-type="inner"&amp;gt;&amp;lt;link-entity name="atos_centrodeemplazamiento" alias="L1" from="atos_centrodeemplazamientoid" to="atos_plantaid" link-type="inner"&amp;gt;&amp;lt;filter type="and"&amp;gt;&amp;lt;condition attribute="atos_centrodeemplazamientoid" operator="eq" value="{{CentroEmplazamiento.atos_centrodeemplazamientoid}}"/&amp;gt;&amp;lt;/filter&amp;gt;&amp;lt;/link-entity&amp;gt;&amp;lt;/link-entity&amp;gt;&amp;lt;/entity&amp;gt;&amp;lt;/fetch&amp;gt;&lt;/filter&gt;&lt;/extra&gt;&lt;/lookup&gt;</LookupViews>
+        </DetailItem>
+        <DetailItem SchemaName="atos_equipoid">
+          <LookupViews>&lt;extra&gt;&lt;filter entity="msdyn_customerasset"&gt;&amp;lt;fetch version="1.0"&amp;gt;&amp;lt;entity name="msdyn_customerasset"&amp;gt;&amp;lt;filter type="and"&amp;gt;&amp;lt;condition attribute="statecode" operator="ne" value="1"/&amp;gt;&amp;lt;/filter&amp;gt;&amp;lt;link-entity name="account" alias="L0" from="accountid" to="msdyn_account" link-type="inner"&amp;gt;&amp;lt;filter type="and"&amp;gt;&amp;lt;condition attribute="name" operator="like" value="{{UTSeleccionada}}%"/&amp;gt;&amp;lt;/filter&amp;gt;&amp;lt;/link-entity&amp;gt;&amp;lt;/entity&amp;gt;&amp;lt;/fetch&amp;gt;&lt;/filter&gt;&lt;/extra&gt;</LookupViews>
+        </DetailItem>
+        <DetailItem SchemaName="atos_ubicaciontecnicaid">
+          <LookupViews>&lt;extra&gt;&lt;actions&gt;0;;0&lt;/actions&gt;&lt;filter entity="account"&gt;&amp;lt;fetch version="1.0"&amp;gt;&amp;lt;entity name="account"&amp;gt;&amp;lt;filter type="and"&amp;gt;&amp;lt;condition attribute="name" operator="like" value="{{UTSeleccionada}}%"/&amp;gt;&amp;lt;/filter&amp;gt;&amp;lt;/entity&amp;gt;&amp;lt;/fetch&amp;gt;&lt;/filter&gt;&lt;/extra&gt;</LookupViews>
+        </DetailItem>
+        <DetailItem SchemaName="atos_avisoid">
+          <LookupViews>&lt;extra&gt;&lt;actions&gt;0;;0&lt;/actions&gt;&lt;filter entity="atos_aviso"&gt;&amp;lt;fetch version="1.0"&amp;gt;&amp;lt;entity name="atos_aviso"&amp;gt;&amp;lt;filter type="and"&amp;gt;&amp;lt;condition attribute="statecode" operator="ne" value="1"/&amp;gt;&amp;lt;condition attribute="atos_ordendetrabajoid" operator="null"/&amp;gt;&amp;lt;/filter&amp;gt;&amp;lt;link-entity name="account" alias="L0" from="accountid" to="atos_ubicaciontecnicaid" link-type="inner"&amp;gt;&amp;lt;filter type="and"&amp;gt;&amp;lt;condition attribute="name" operator="like" value="{{UTSeleccionada}}%"/&amp;gt;&amp;lt;/filter&amp;gt;&amp;lt;/link-entity&amp;gt;&amp;lt;/entity&amp;gt;&amp;lt;/fetch&amp;gt;&lt;/filter&gt;&lt;/extra&gt;</LookupViews>
+        </DetailItem>
+      </SerializedChildren>
+    </FormTab>
+    <FormTab xsi:type="IFrameTab">
+      <Name>Web</Name>
+      <Url>file://ObjetoOrdenTrabajo/ObjetoOrdenTrabajo.html</Url>
+      <IsVisible>false</IsVisible>
+    </FormTab>
+  </SerializedChildrenV2>
+</EntityForm>

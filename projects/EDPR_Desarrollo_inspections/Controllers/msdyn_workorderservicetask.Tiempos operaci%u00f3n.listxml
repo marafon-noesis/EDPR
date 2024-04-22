@@ -1,0 +1,211 @@
+﻿<EntityList>
+  <Attributes>
+    <EntityName>msdyn_workorderservicetask</EntityName>
+    <CamelCase>msdyn_workorderservicetask</CamelCase>
+    <VisualStudioProjectId>00000000-0000-0000-0000-000000000000</VisualStudioProjectId>
+  </Attributes>
+  <Name>Tiempos operación</Name>
+  <Kind>List</Kind>
+  <AutoWideWidth>0</AutoWideWidth>
+  <OrderBy>atos_numerooperacioncrm</OrderBy>
+  <MultiSelectCommands>custom_aprobar|custom_aprobar||custom_cancelar|custom_cancelar|</MultiSelectCommands>
+  <SharedVariables>&lt;SharedVariables&gt;&lt;Variables&gt;&lt;/Variables&gt;&lt;/SharedVariables&gt;</SharedVariables>
+  <SerializedBindings>
+    <string>atos_cancelarhorasensap</string>
+    <string>atos_centroid</string>
+    <string>atos_clavedecontrolid</string>
+    <string>atos_confirmacion</string>
+    <string>atos_confirmacionmodificadaporsapid</string>
+    <string>atos_confirmacionmodificadaporsap</string>
+    <string>atos_confirmadoporsapid</string>
+    <string>atos_confirmadoporsap</string>
+    <string>atos_contadordeconfirmacion</string>
+    <string>msdyn_actualduration</string>
+    <string>atos_duracionrealhoras</string>
+    <string>atos_estadointegracionsap</string>
+    <string>atos_estatusconfirmacion</string>
+    <string>atos_existepedido</string>
+    <string>atos_fechaconfirmacion</string>
+    <string>atos_fechafinreal</string>
+    <string>atos_fechainicioreal</string>
+    <string>atos_hojaderutaid</string>
+    <string>atos_npedido</string>
+    <string>atos_capacidadreal</string>
+    <string>atos_numerooperacioncrm</string>
+    <string>msdyn_workorderservicetaskid</string>
+    <string>msdyn_workorder</string>
+    <string>atos_origen</string>
+    <string>atos_porcentajetrabajo</string>
+    <string>ownerid</string>
+    <string>atos_puestotrabajoprincipalid</string>
+    <string>atos_descripcion</string>
+    <string>atos_trabajodatosreales</string>
+    <string>atos_trabajoreal</string>
+    <string>atos_ubicaciontecnicaid</string>
+  </SerializedBindings>
+  <MaxColumns>0</MaxColumns>
+  <TemplateSelectorRule>&lt;?xml version="1.0" ?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="11" version="0"&gt;&lt;branch e="true" info="" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="Or"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.atos_estadointegracionsap&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Picklist:2&lt;/arg&gt;&lt;/condition&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.atos_estadointegracionsap&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Picklist:3&lt;/arg&gt;&lt;/condition&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.atos_estadointegracionsap&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Picklist:5&lt;/arg&gt;&lt;/condition&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.atos_estadointegracionsap&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Picklist:6&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;TemplateIndex&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Integer:1&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;/conditions&gt;&lt;action&gt;&lt;branch e="true" info="Editable/not editable template" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.atos_hojaderutaid&lt;/var&gt;&lt;op&gt;ContainsData&lt;/op&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;TemplateIndex&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Integer:0&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;TemplateIndex&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Integer:2&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/Workflow&gt;</TemplateSelectorRule>
+  <IFrame>file://Operacion/OperacionList.html</IFrame>
+  <Fetch version="1.0">
+    <entity name="msdyn_workorderservicetask"/>
+  </Fetch>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>240</DesignWidth>
+      <DesignHeight>40</DesignHeight>
+      <Name>Default</Name>
+      <Width>240</Width>
+      <Height>59</Height>
+      <Buttons>none</Buttons>
+      <SerializedChildren>
+        <CellTemplate SchemaName="atos_numerooperacioncrm">
+          <StyleName>primary</StyleName>
+          <Bounds>8,2,227,24</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="atos_descripcion">
+          <StyleName>gray</StyleName>
+          <Bounds>8,26,227,11</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="atos_fechainicioreal">
+          <StyleName>gray</StyleName>
+          <Bounds>8,36,110,11</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="atos_fechafinreal">
+          <StyleName>gray</StyleName>
+          <Bounds>118,36,117,11</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="atos_trabajoreal">
+          <StyleName>gray</StyleName>
+          <Bounds>78,46,78,12</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="atos_capacidadreal">
+          <StyleName>gray</StyleName>
+          <Bounds>8,46,71,12</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="atos_duracionrealhoras">
+          <StyleName>gray</StyleName>
+          <Bounds>155,46,79,12</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+    <RowTemplate>
+      <DesignWidth>240</DesignWidth>
+      <DesignHeight>40</DesignHeight>
+      <Name>Sync errors</Name>
+      <Width>240</Width>
+      <Height>95</Height>
+      <SerializedBackground>-20383</SerializedBackground>
+      <SerializedSelectedBackground>-20379</SerializedSelectedBackground>
+      <SerializedChildren>
+        <CellTemplate SchemaName="atos_numerooperacioncrm">
+          <StyleName>primary</StyleName>
+          <Bounds>8,2,227,24</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="atos_descripcion">
+          <StyleName>gray</StyleName>
+          <Bounds>8,26,227,11</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="atos_fechainicioreal">
+          <StyleName>gray</StyleName>
+          <Bounds>8,37,227,11</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="atos_fechafinreal">
+          <StyleName>gray</StyleName>
+          <Bounds>8,48,227,11</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="atos_trabajoreal">
+          <StyleName>gray</StyleName>
+          <Bounds>8,59,227,11</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="atos_capacidadreal">
+          <StyleName>gray</StyleName>
+          <Bounds>8,70,227,11</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="atos_duracionrealhoras">
+          <StyleName>gray</StyleName>
+          <Bounds>8,81,227,11</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+    <RowTemplate>
+      <DesignWidth>240</DesignWidth>
+      <DesignHeight>40</DesignHeight>
+      <Name>Default-Editable</Name>
+      <Width>240</Width>
+      <Height>59</Height>
+      <SerializedChildren>
+        <CellTemplate SchemaName="atos_numerooperacioncrm">
+          <StyleName>primary</StyleName>
+          <Bounds>8,2,227,24</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="atos_descripcion">
+          <StyleName>blue editable</StyleName>
+          <Bounds>8,26,227,11</Bounds>
+          <CellKind>5</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="atos_fechainicioreal">
+          <StyleName>gray</StyleName>
+          <Bounds>8,36,110,11</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="atos_fechafinreal">
+          <StyleName>gray</StyleName>
+          <Bounds>118,36,117,11</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="atos_trabajoreal">
+          <StyleName>gray</StyleName>
+          <Bounds>78,46,78,12</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="atos_capacidadreal">
+          <StyleName>gray</StyleName>
+          <Bounds>8,46,71,12</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="atos_duracionrealhoras">
+          <StyleName>gray</StyleName>
+          <Bounds>155,46,79,12</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+  <CustomProperties/>
+</EntityList>

@@ -1,0 +1,13 @@
+﻿<Dashboard xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:dummy="0">
+  <Columns>1</Columns>
+  <Rows>3</Rows>
+  <Items>
+    <DashboardComponent xsi:type="DashboardEntityComponent" Kind="List" Binding="bookableresourcebooking;&lt;extra&gt;&lt;actions&gt;3;;1&lt;/actions&gt;&lt;/extra&gt;" Options="3">
+      <Bounds>0,1,1,1</Bounds>
+      <LegacyConfig>bookableresourcebooking</LegacyConfig>
+    </DashboardComponent>
+    <DashboardComponent xsi:type="DashboardEntityComponent" Kind="Chart" Binding="msdyn_workorder;msdyn_workorder.Active Work Orders by Type" Options="3">
+      <Bounds>0,0,1,1</Bounds>
+    </DashboardComponent>
+  </Items>
+</Dashboard>

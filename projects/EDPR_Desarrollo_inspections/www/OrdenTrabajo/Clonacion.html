@@ -1,0 +1,219 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Activate IE9 document mode, if available -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Defined iOS viewport -->
+    <meta name="viewport" content="initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <script type="text/javascript" src="../atos_jquery.3.3.1.min.js"></script>
+    <script type="text/javascript" src="../JSBridge.js"></script>
+    <script type="text/javascript" src="../Common.js"></script>
+    <script type="text/javascript" src="../Schema.js"></script>
+    <script type="text/javascript" src="../Enums.js"></script>
+    <script type="text/javascript" src="../CommonEDPR.js"></script>
+    <script type="text/javascript" src="OrdenTrabajo.js"></script>
+    <style>
+        #idPrincipal {
+            background-color: white;
+        }
+
+
+        #cabecera {
+            color: darkblue;
+            font-weight: bold;
+        }
+
+        #tablaModo02 {
+            display: -webkit-flex;
+            display: -moz-flex;
+            display: -ms-flex;
+            display: -o-flex;
+            display: flex;
+            justify-content: space-around;
+            flex-direction: row;
+            -o-flex-direction: row;
+            -ms-flex-direction: row;
+            -moz-flex-direction: row;
+            -webkit-flex-direction: row;
+        }
+
+        section {
+            background-color: white;
+            margin-top: 0.2em;
+            padding-bottom: 1em;
+            display: flex;
+            display: -o-flex;
+            display: -ms-flex;
+            display: -moz-flex;
+            display: -webkit-flex;
+            justify-content: space-around;
+            flex-direction: row;
+            -o-flex-direction: row;
+            -ms-flex-direction: row;
+            -moz-flex-direction: row;
+            -webkit-flex-direction: row;
+        }
+
+            section > div {
+                flex-grow: 0.7;
+            }
+
+        <!--
+        p {
+            font-size: 13px;
+            font-weight: bold;
+            color: darkblue;
+            background-color: #F3F3F3;
+        }
+        -->
+
+        table {
+            font-family: tahoma;
+            border-collapse: collapse;
+            width: 60%;
+            font-size: 11px;
+        }
+
+        th {
+            text-align: left;
+            padding: 2px;
+            color: #666666;
+        }
+
+        td {
+            text-align: left;
+            padding: 2px;
+        }
+        /* even, odd */
+        tr:nth-child(odd) {
+            background-color: #F3F3F3;
+        }
+
+        th:hover {
+            background-color: #f8c4c4;
+        }
+
+        .alert-js-RefreshDialog-Footer {
+            bottom: 0px;
+            width: calc(60% - 30px);
+            height: 44px;
+            text-align: right;
+            background-color: #F8F8F8;
+            border-top-color: #FFFFFF;
+            right: 0;
+            padding-right: 30px;
+        }
+
+        .alert-js-RefreshDialog-Button {
+            color: #444444;
+            background-color: #FFFFFF;
+            height: 24px;
+            font-family: Segoe UI,Tahoma,Arial;
+            border: 1px solid #C6C6C6;
+            background-image: none;
+            margin-top: 10px;
+            width: auto;
+            min-width: 84px;
+            white-space: nowrap;
+            font-size: 12px;
+            line-height: 16px;
+            text-align: center;
+            cursor: pointer;
+            background-repeat: repeat-x;
+            padding-left: 10px;
+            padding-right: 10px;
+            margin-left: 8px;
+        }
+
+            .alert-js-RefreshDialog-Button:hover {
+                background-color: #B1D6F0;
+            }
+
+            .alert-js-RefreshDialog-Button:disabled {
+                cursor: auto;
+                color: #888888;
+            }
+
+                .alert-js-RefreshDialog-Button:disabled:hover {
+                    background-color: #ffffff;
+                }
+    </style>
+
+    <script>
+     
+        var statusInsertarClonacion = [];
+        var statusBorrarClonacion = [];
+
+        function seleccionar(e,param,id) {
+			
+            var valor = id; 
+
+            // if ( varCheck == true )
+            if (e.checked) {
+                // hay que a�adirlo
+                generarElementosCambiados("I", valor)
+            }
+            // significa que es "false" y hay que quitarlo
+            else {
+                //hay que quitarlo
+                generarElementosCambiados("B", valor);
+            }
+            return;
+        }
+
+        // generamos el array con los elementos que hay que borrar y crear de log de estado
+        function generarElementosCambiados(tipoOperacion, elemento) {
+
+            // si es un borrado
+            if (tipoOperacion == "B") {
+                // si se ha insertado anteriormente lo borro
+                var index = statusInsertarClonacion.indexOf(elemento);
+                if (index > -1) {
+                    statusInsertarClonacion.splice(index, 1);
+                }
+                // sino lo a�ado a borrar
+                else {
+                    statusBorrarClonacion.push(elemento);
+                }
+            }
+            if (tipoOperacion == "I") {
+                // si se ha borrado anteriormente lo borro
+                var index = statusBorrarClonacion.indexOf(elemento);
+                if (index > -1) {
+                    statusBorrarClonacion.splice(index, 1);
+                }
+                // sino lo a�ado a borrar
+                else {
+                    statusInsertarClonacion.push(elemento);
+                }
+            }
+        }
+
+    </script>
+
+</head>
+<body onload="FS.OrdenTrabajo.OTOnLoadClonacion()">
+    <div id="idPrincipal">
+        <section>
+            <!--    Estado de USUARIO con n�mero Clasif.    -->
+            <div>
+                <div style="margin-left: 0m;">
+
+                    <table id="tblClonacion" border="0">
+                        <tr id="cabecera">
+                            <th>Sel</th>
+                            <th>Cod.</th>
+                            <th>Descrip.</th>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="alert-js-RefreshDialog-Footer" id="alertJs-tdDialogFooter">
+        <button id="btnSaveClonacion" onclick="FS.OrdenTrabajo.ClonarOT(null)" tabindex="1" type="button" class="alert-js-RefreshDialog-Button">OK</button>
+    </div>
+
+</body>
+</html>

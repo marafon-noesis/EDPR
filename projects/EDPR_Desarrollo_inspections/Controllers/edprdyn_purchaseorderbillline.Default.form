@@ -1,0 +1,26 @@
+﻿<EntityForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:dummy="0" flexi="0" fleximode="1" fullscreen="0" resize="0" version="2">
+  <IsContactForm>false</IsContactForm>
+  <EntityName>edprdyn_purchaseorderbillline</EntityName>
+  <CamelCase>edprdyn_purchaseorderbillline</CamelCase>
+  <PrimaryCommands>!defcmd</PrimaryCommands>
+  <EnabledWorkflows>OnLoadEnabled OnChangeEnabled OnSaveEnabled OnExecuteCommand OnCanExecuteCommand OnExecuteButton</EnabledWorkflows>
+  <SerializedChildrenV2>
+    <FormTab xsi:type="DetailTab" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
+      <Name>General</Name>
+      <SerializedChildren>
+        <DetailItem SchemaName="edprdyn_name"/>
+        <DetailItem SchemaName="edprdyn_purchaseorder"/>
+        <DetailItem SchemaName="edprdyn_localpurchaseordernumber"/>
+        <DetailItem SchemaName="edprdyn_purchaseorderservice"/>
+        <DetailItem SchemaName="edprdyn_materialdocumentyear"/>
+        <DetailItem SchemaName="edprdyn_sapdocument"/>
+        <DetailItem SchemaName="edprdyn_accountingdocumentday"/>
+        <DetailItem SchemaName="edprdyn_referencefiscalyear"/>
+        <DetailItem SchemaName="edprdyn_materialdocumentitem"/>
+        <DetailItem SchemaName="edprdyn_quantity"/>
+        <DetailItem SchemaName="edprdyn_amount"/>
+        <DetailItem SchemaName="transactioncurrencyid"/>
+      </SerializedChildren>
+    </FormTab>
+  </SerializedChildrenV2>
+</EntityForm>

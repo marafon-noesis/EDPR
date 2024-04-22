@@ -1,0 +1,23 @@
+﻿<GlobalMap>
+  <Items>
+    <GlobalMapComponent>
+      <EntityName>bookableresourcebooking</EntityName>
+      <ViewName>Bookings</ViewName>
+      <IsInitial>true</IsInitial>
+    </GlobalMapComponent>
+    <GlobalMapComponent>
+      <EntityName>atos_aviso</EntityName>
+      <ViewName>Avisos (mapa)</ViewName>
+      <IsInitial>true</IsInitial>
+    </GlobalMapComponent>
+    <GlobalMapComponent>
+      <EntityName>msdyn_workorder</EntityName>
+      <ViewName>Ordenes de trabajo activas</ViewName>
+      <IsInitial>true</IsInitial>
+    </GlobalMapComponent>
+  </Items>
+  <Setup>
+    <AggregatePins>false</AggregatePins>
+    <ExpandPins>false</ExpandPins>
+  </Setup>
+</GlobalMap>

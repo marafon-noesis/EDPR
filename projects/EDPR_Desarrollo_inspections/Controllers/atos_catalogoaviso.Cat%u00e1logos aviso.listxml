@@ -1,0 +1,86 @@
+﻿<EntityList>
+  <Attributes>
+    <EntityName>atos_catalogoaviso</EntityName>
+    <CamelCase>atos_catalogoaviso</CamelCase>
+    <VisualStudioProjectId>00000000-0000-0000-0000-000000000000</VisualStudioProjectId>
+    <ClassBinding/>
+  </Attributes>
+  <Name>Catálogos aviso</Name>
+  <Kind>List</Kind>
+  <AutoWideWidth>0</AutoWideWidth>
+  <OrderBy>atos_name</OrderBy>
+  <SerializedBindings>
+    <string>createdby</string>
+    <string>createdonbehalfby</string>
+    <string>atos_catalogoid</string>
+    <string>atos_catalogoavisoid</string>
+    <string>atos_catalogodao</string>
+    <string>atos_codigoid</string>
+    <string>utcconversiontimezonecode</string>
+    <string>atos_dao</string>
+    <string>atos_descripcion</string>
+    <string>owningteam</string>
+    <string>statecode</string>
+    <string>statuscode</string>
+    <string>createdon</string>
+    <string>overriddencreatedon</string>
+    <string>atos_creadoensap</string>
+    <string>modifiedon</string>
+    <string>atos_modificadoensap</string>
+    <string>atos_fechafin</string>
+    <string>atos_fechainicio</string>
+    <string>atos_grcodigosid</string>
+    <string>atos_grupodecodigosdedaosid</string>
+    <string>modifiedby</string>
+    <string>modifiedonbehalfby</string>
+    <string>atos_identificador</string>
+    <string>importsequencenumber</string>
+    <string>versionnumber</string>
+    <string>timezoneruleversionnumber</string>
+    <string>atos_peticionborrado</string>
+    <string>atos_posicionasociadaid</string>
+    <string>ownerid</string>
+    <string>atos_name</string>
+    <string>owningbusinessunit</string>
+    <string>atos_creadoporsap</string>
+    <string>atos_modificadoporsap</string>
+    <string>owninguser</string>
+  </SerializedBindings>
+  <MaxColumns>0</MaxColumns>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>240</DesignWidth>
+      <DesignHeight>40</DesignHeight>
+      <Name>Default</Name>
+      <Width>240</Width>
+      <Height>67</Height>
+      <SerializedChildren>
+        <CellTemplate SchemaName="atos_catalogoid">
+          <StyleName>gray</StyleName>
+          <Bounds>4,4,233,14</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="atos_grcodigosid">
+          <StyleName>gray</StyleName>
+          <Bounds>4,19,233,14</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="atos_codigoid">
+          <StyleName>gray</StyleName>
+          <Bounds>4,34,233,14</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="atos_descripcion">
+          <StyleName>gray</StyleName>
+          <Bounds>4,49,233,14</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+  <CustomProperties/>
+</EntityList>

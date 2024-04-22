@@ -1,0 +1,29 @@
+﻿<EntityForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:dummy="0" flexi="0" fleximode="1" fullscreen="0" resize="0" version="2">
+  <IsContactForm>false</IsContactForm>
+  <EntityName>edprdyn_sapintegration</EntityName>
+  <CamelCase>edprdyn_sapintegration</CamelCase>
+  <PrimaryCommands>!defcmd</PrimaryCommands>
+  <EnabledWorkflows>OnLoadEnabled OnChangeEnabled OnSaveEnabled OnExecuteCommand OnCanExecuteCommand OnExecuteButton</EnabledWorkflows>
+  <SerializedChildrenV2>
+    <FormTab xsi:type="DetailTab" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
+      <Name>General</Name>
+      <SerializedChildren>
+        <DetailItem SchemaName="edprdyn_name"/>
+        <DetailItem SchemaName="edprdyn_sapintegrationdirection"/>
+        <DetailItem SchemaName="edprdyn_sapintegrationactions"/>
+        <DetailItem SchemaName="edprdyn_sapintegrationentities"/>
+        <DetailItem SchemaName="edprdyn_statuscomment"/>
+        <DetailItem SchemaName="edprdyn_callbackerrormessage"/>
+      </SerializedChildren>
+    </FormTab>
+    <FormTab xsi:type="DetailTab" NameModified="1" IconModified="0" EntityIconName="" IsIconNameReadOnly="0">
+      <Name>Related Entities</Name>
+      <SerializedChildren>
+        <DetailItem SchemaName="edprdyn_goodsreceipt"/>
+        <DetailItem SchemaName="edprdyn_servicesheet"/>
+        <DetailItem SchemaName="edprdyn_purchaseorderid"/>
+        <DetailItem SchemaName="edprdyn_invoice"/>
+      </SerializedChildren>
+    </FormTab>
+  </SerializedChildrenV2>
+</EntityForm>

@@ -1,0 +1,88 @@
+﻿<EntityList UseSyncFilter="true">
+  <Attributes>
+    <EntityName>bookableresourcebooking</EntityName>
+    <CamelCase>bookableresourcebooking</CamelCase>
+    <VisualStudioProjectId>00000000-0000-0000-0000-000000000000</VisualStudioProjectId>
+    <ClassBinding/>
+  </Attributes>
+  <Name>Bookings</Name>
+  <Kind>List</Kind>
+  <AutoWideWidth>0</AutoWideWidth>
+  <OrderBy>starttime</OrderBy>
+  <SharedVariables>&lt;SharedVariables&gt;&lt;Variables&gt;&lt;/Variables&gt;&lt;/SharedVariables&gt;</SharedVariables>
+  <SerializedBindings>
+    <string>atos_estdinstal</string>
+    <string>bookingstatus</string>
+    <string>endtime</string>
+    <string>starttime</string>
+    <string>name</string>
+    <string>msdyn_workorder</string>
+    <string>resource</string>
+    <string>bookableresourcebookingid</string>
+    <string>bookingstatus.bookingstatus.msdyn_fieldservicestatus</string>
+    <string>msdyn_workorder.msdyn_workorder.msdyn_name</string>
+    <string>msdyn_workorder.msdyn_workorder.atos_codigoordentrabajosap</string>
+    <string>msdyn_workorder.msdyn_workorder.msdyn_address1</string>
+    <string>msdyn_workorder.msdyn_workorder.atos_titulo</string>
+    <string>msdyn_workorder.msdyn_workorder.msdyn_serviceaccount</string>
+    <string>resource.bookableresource.userid</string>
+  </SerializedBindings>
+  <CalendarFields>starttime;endtime</CalendarFields>
+  <MaxColumns>0</MaxColumns>
+  <TemplateSelectorRule>&lt;?xml version="1.0" ?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="11" version="0"&gt;&lt;definition e="false"&gt;&lt;var&gt;var1&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;type&gt;String&lt;/type&gt;&lt;arg&gt;String:0&lt;/arg&gt;&lt;/definition&gt;&lt;function e="false"&gt;&lt;var&gt;var1&lt;/var&gt;&lt;func&gt;Concat&lt;/func&gt;&lt;arg&gt;var:Entity.(msdyn_workorder.msdyn_workorder.msdyn_name)&lt;/arg&gt;&lt;arg&gt;String: / &lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;var1&lt;/var&gt;&lt;func&gt;Concat&lt;/func&gt;&lt;arg&gt;var:var1&lt;/arg&gt;&lt;arg&gt;var:Entity.(msdyn_workorder.msdyn_workorder.atos_codigoordentrabajosap)&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;var1&lt;/var&gt;&lt;func&gt;Concat&lt;/func&gt;&lt;arg&gt;var:var1&lt;/arg&gt;&lt;arg&gt;String:\n&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;var1&lt;/var&gt;&lt;func&gt;Concat&lt;/func&gt;&lt;arg&gt;var:var1&lt;/arg&gt;&lt;arg&gt;var:Entity.(msdyn_workorder.msdyn_workorder.msdyn_serviceaccount)&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;var1&lt;/var&gt;&lt;func&gt;Concat&lt;/func&gt;&lt;arg&gt;var:var1&lt;/arg&gt;&lt;arg&gt;String:\n&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;var1&lt;/var&gt;&lt;func&gt;Concat&lt;/func&gt;&lt;arg&gt;var:var1&lt;/arg&gt;&lt;arg&gt;var:Entity.(msdyn_workorder.msdyn_workorder.atos_titulo)&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;var1&lt;/var&gt;&lt;func&gt;Concat&lt;/func&gt;&lt;arg&gt;var:var1&lt;/arg&gt;&lt;arg&gt;String:\n&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;var1&lt;/var&gt;&lt;func&gt;Concat&lt;/func&gt;&lt;arg&gt;var:var1&lt;/arg&gt;&lt;arg&gt;var:Entity.(resource.bookableresource.userid)&lt;/arg&gt;&lt;/function&gt;&lt;/Workflow&gt;</TemplateSelectorRule>
+  <Search>
+    <attribute schema="name" method="Contains"/>
+    <attribute schema="resource" method="Contains" reference="true"/>
+    <attribute schema="msdyn_workorder" method="Contains" reference="true"/>
+  </Search>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>320</DesignWidth>
+      <DesignHeight>48</DesignHeight>
+      <Name>Default</Name>
+      <Width>320</Width>
+      <Height>90</Height>
+      <SerializedChildren>
+        <CellTemplate SchemaName="msdyn_workorder.msdyn_workorder.msdyn_serviceaccount">
+          <StyleName>black</StyleName>
+          <Bounds>123,29,197,16</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="starttime">
+          <StyleName>time_only</StyleName>
+          <Bounds>14,9,84,24</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="var1">
+          <StyleName>primary</StyleName>
+          <Bounds>123,12,197,16</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>0</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="msdyn_workorder.msdyn_workorder.atos_titulo">
+          <StyleName>black</StyleName>
+          <Bounds>123,44,197,16</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="resource.bookableresource.userid">
+          <StyleName>black</StyleName>
+          <Bounds>123,60,197,16</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="atos_estdinstal">
+          <StyleName>black</StyleName>
+          <Bounds>123,74,197,16</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+  <CustomProperties>
+    <SerializedClassBinding name="var1" label="var1" type="String"/>
+  </CustomProperties>
+</EntityList>

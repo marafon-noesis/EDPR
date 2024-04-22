@@ -1,0 +1,54 @@
+﻿<EntityList>
+  <Attributes>
+    <EntityName>edprdyn_inventoryitem</EntityName>
+    <CamelCase>edprdyn_inventoryitem</CamelCase>
+  </Attributes>
+  <Name>Inventory Document Item View</Name>
+  <Kind>List</Kind>
+  <AutoWideWidth>0</AutoWideWidth>
+  <OrderBy>edprdyn_name</OrderBy>
+  <SerializedBindings>
+    <string>edprdyn_countedquantity</string>
+    <string>edprdyn_inventoryitemid</string>
+    <string>edprdyn_inventorystatus</string>
+    <string>edprdyn_materialnumber</string>
+    <string>edprdyn_name</string>
+    <string>edprdyn_quant</string>
+  </SerializedBindings>
+  <MaxColumns>0</MaxColumns>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>320</DesignWidth>
+      <DesignHeight>48</DesignHeight>
+      <Name>Default</Name>
+      <Width>320</Width>
+      <Height>48</Height>
+      <SerializedChildren>
+        <CellTemplate SchemaName="edprdyn_name">
+          <StyleName>primary</StyleName>
+          <Bounds>10,2,302,28</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="edprdyn_materialnumber">
+          <StyleName>gray</StyleName>
+          <Bounds>10,31,149,13</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="edprdyn_inventorystatus">
+          <StyleName>gray</StyleName>
+          <Bounds>160,31,64,13</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>8</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="edprdyn_countedquantity">
+          <StyleName>r_gray</StyleName>
+          <Bounds>224,31,89,13</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>8</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+</EntityList>

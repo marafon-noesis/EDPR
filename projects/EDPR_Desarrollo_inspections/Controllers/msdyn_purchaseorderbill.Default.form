@@ -1,0 +1,23 @@
+﻿<EntityForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:dummy="0" flexi="0" fleximode="1" fullscreen="0" resize="0" version="2">
+  <IsContactForm>false</IsContactForm>
+  <EntityName>msdyn_purchaseorderbill</EntityName>
+  <CamelCase>msdyn_purchaseorderbill</CamelCase>
+  <PrimaryCommands>!defcmd</PrimaryCommands>
+  <EnabledWorkflows>OnLoadEnabled OnChangeEnabled OnSaveEnabled OnExecuteCommand OnCanExecuteCommand OnExecuteButton</EnabledWorkflows>
+  <SerializedChildrenV2>
+    <FormTab xsi:type="DetailTab" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
+      <Name>General</Name>
+      <SerializedChildren>
+        <DetailItem SchemaName="msdyn_name"/>
+        <DetailItem SchemaName="msdyn_purchaseorder"/>
+        <DetailItem SchemaName="msdyn_billdate"/>
+        <DetailItem SchemaName="edprdyn_invoicefiscalyear"/>
+        <DetailItem SchemaName="transactioncurrencyid"/>
+      </SerializedChildren>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" NameModified="0" IconModified="0" EntityIconName="" IsIconNameReadOnly="0">
+      <Name>Artículos de factura de pedido de compra List</Name>
+      <Binding SchemaName="edprdyn_purchaseorderbillline.edprdyn_purchaseorderserviceid"/>
+    </FormTab>
+  </SerializedChildrenV2>
+</EntityForm>

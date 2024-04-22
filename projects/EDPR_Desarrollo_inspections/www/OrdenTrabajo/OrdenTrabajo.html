@@ -1,0 +1,383 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <!-- Activate IE9 document mode, if available. -->
+    <!-- If missing, the WebBrowser control on Windows runs in default IE8 mode which is not supported by JSBridge. -->
+    <meta http-equiv='X-UA-Compatible' content='IE=edge' />
+    <!-- Defined iOS viewport -->
+    <!-- If missing, the UIWebView control on iOS zooms out the web page and allows the pinch zoom. -->
+    <meta name='viewport' content='initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no'>
+    <!-- JSBridge must be explicitly included, otherwise the bridge is not accessible from Javascript. -->
+    <script type="text/javascript" src="../atos_jquery.3.3.1.min.js"></script>
+    <script type="text/javascript" src="../JSBridge.js"></script>
+    <script type="text/javascript" src="../Common.js"></script>
+    <script type="text/javascript" src="../Schema.js"></script>
+    <script type="text/javascript" src="../Enums.js"></script>
+    <script type="text/javascript" src="../CommonEDPR.js"></script>
+    <script type="text/javascript" src="../MobileSdk.min.js"></script>
+    <script type="text/javascript" src="../bridge.js"></script>
+    <script type="text/javascript" src="../exec.js"></script>
+    <script type="text/javascript" src="OrdenTrabajo.js"></script>
+    <style>
+        #idPrincipal {
+            background-color: white;
+        }
+
+
+        #cabecera {
+            color: darkblue;
+            font-weight: bold;
+        }
+
+        #tablaModo02 {
+            display: -webkit-flex;
+            display: -moz-flex;
+            display: -ms-flex;
+            display: -o-flex;
+            display: flex;
+            justify-content: space-around;
+            flex-direction: row;
+            -o-flex-direction: row;
+            -ms-flex-direction: row;
+            -moz-flex-direction: row;
+            -webkit-flex-direction: row;
+        }
+
+        section {
+            background-color: white;
+            margin-top: 0.2em;
+            padding-bottom: 1em;
+            display: flex;
+            display: -o-flex;
+            display: -ms-flex;
+            display: -moz-flex;
+            display: -webkit-flex;
+            justify-content: space-around;
+            flex-direction: row;
+            -o-flex-direction: row;
+            -ms-flex-direction: row;
+            -moz-flex-direction: row;
+            -webkit-flex-direction: row;
+        }
+
+            section > div {
+                flex-grow: 0.7;
+            }
+
+        <!--
+        p {
+            font-size: 13px;
+            font-weight: bold;
+            color: darkblue;
+            background-color: #F3F3F3;
+        }
+        -->
+
+        table {
+            font-family: tahoma;
+            border-collapse: collapse;
+            width: 80%;
+            font-size: 11px;
+        }
+
+        th {
+            text-align: left;
+            padding: 2px;
+            color: #666666;
+        }
+
+        td {
+            text-align: left;
+            padding: 2px;
+        }
+        /* even, odd */
+        tr:nth-child(odd) {
+            background-color: #F3F3F3;
+        }
+
+        th:hover {
+            background-color: #f8c4c4;
+        }
+
+        .alert-js-RefreshDialog-Footer {
+            bottom: 0px;
+            width: calc(100% - 30px);
+            height: 44px;
+            text-align: right;
+            background-color: #F8F8F8;
+            border-top-color: #FFFFFF;
+            right: 0;
+            padding-right: 30px;
+        }
+
+        .alert-js-RefreshDialog-Button {
+            color: #444444;
+            background-color: #FFFFFF;
+            height: 24px;
+            font-family: Segoe UI,Tahoma,Arial;
+            border: 1px solid #C6C6C6;
+            background-image: none;
+            margin-top: 10px;
+            width: auto;
+            min-width: 84px;
+            white-space: nowrap;
+            font-size: 12px;
+            line-height: 16px;
+            text-align: center;
+            cursor: pointer;
+            background-repeat: repeat-x;
+            padding-left: 10px;
+            padding-right: 10px;
+            margin-left: 8px;
+        }
+
+            .alert-js-RefreshDialog-Button:hover {
+                background-color: #B1D6F0;
+            }
+
+            .alert-js-RefreshDialog-Button:disabled {
+                cursor: auto;
+                color: #888888;
+            }
+
+                .alert-js-RefreshDialog-Button:disabled:hover {
+                    background-color: #ffffff;
+                }
+    </style>
+
+    <script>
+        // ****************************************************************************************
+        // La función "mRD_CON_CLASIFICACION" es añadida a los radiobutton en el evento "onchange"
+        // de forma dinámica al carga la tabla (html). Se ejecuta al chequear los radioButton
+        // ****************************************************************************************
+        /// variables globales que guardan la opcion inicial de seleccion de clasificacion  desde Aviso.js(INPUT)
+        var varYaEstabaSele = "";
+        var varSup = "";
+        var varInf = "";
+        var inputSelected = "";
+        var inputSelectedValor = "";
+        var jefeParque = false;
+		var fechasProgramacion = false;
+        listCodigoConClasificacion = [];
+
+        var textoStatusUsuario;
+        var statusInsertar = [];
+        var statusBorrar = [];
+
+        var historicoEstadoUsuario;
+
+        function mRD_CON_CLASIFICACION(e, uno, cod, objRd, inferior, superior, idioma) {
+
+            var CO_EN = "1033";
+            var CO_ES = "3082";
+            var varIntSele = parseInt(uno);
+            var varCorrecto = 0;
+
+            var varID = $("#" + objRd).attr("id");
+            var varCheck = $("#" + objRd).attr("checked");
+            var varName = $("#" + objRd).attr("name");
+            var varValor = $("#" + objRd).val();
+            var varMSJ = $("#" + objRd).attr("msj");
+            var varEstadoAvisoId = $("#" + objRd).attr("estadoavisoid");
+            var codigo = $("#" + objRd).attr("codigo");
+            var varIdentificadorSAP = $("#" + objRd).attr("identificadorsap");
+            var numCambio = $("#" + objRd).attr("numcambio");
+
+
+            $("#idDivMsj").empty();
+
+            varCorrecto = 0;
+            if (varIntSele >= varInf && varIntSele <= varSup) {
+                varCorrecto = 0;
+            }
+            else {
+                varCorrecto = 1;
+                $("#idDivMsj").attr("style", "color:red;");
+                $("#idDivMsj").empty();
+
+                if (idioma === CO_ES) {
+                    $("#idDivMsj").append("Este status no esta disponible " +
+                        ", <br/> desde el estado actual.");
+                }
+                else {
+                    $("#idDivMsj").append("This status is not available " +
+                        ", <br/> from current status." + varInf);
+                }
+            }
+            if (varCorrecto == 0) {
+                var valor = varIdentificadorSAP + "|" + codigo + "|" + varEstadoAvisoId + "|" + numCambio;
+                if (listCodigoConClasificacion.length > 0 && listCodigoConClasificacion[0].trim() != "")
+                    generarElementosCambiados("B", listCodigoConClasificacion[0]);
+                generarElementosCambiados("I", valor);
+                listCodigoConClasificacion = [];
+                listCodigoConClasificacion.push(valor);
+                inputSelected = e.id;
+                generarTextoStatusUsuario();
+            }
+            else {
+                // cancelamos el evento
+                $("#" + inputSelected).prop("checked", true);
+                return false;
+            }
+            return;
+        }
+
+        function mRD_SIN_CLASIFICACION13(e, uno, param, idioma) {
+
+            var CO_EN = "1033";
+            var CO_ES = "3082";
+
+	    //REDMINE  22343  AAC deshabilitar programación
+			if (uno == "PRGM" || uno == "PRGE"){
+				$(e).prop('checked', !$(e).prop('checked'));
+                return false;			
+			}
+
+
+            var varID = $("#" + param).attr("id");
+            var varCheck = $("#" + param).attr("checked");
+            var varCheck2 = $("#" + param + ":checked").val();
+            var varName = $("#" + param).attr("name");
+            var varValor = $("#" + param).val();
+            var varEstadoAvisoId = $("#" + param).attr("estadoavisoid");
+            var varIdentificadorSAP = $("#" + param).attr("identificadorsap");
+            var codigo = $("#" + param).attr("codigo");
+            var numCambio = $("#" + param).attr("numcambio");
+            var valor = varIdentificadorSAP + "|" + codigo + "|" + varEstadoAvisoId + "|" + numCambio;
+
+            $("#idDivMsj").attr("style", "color:red;");
+            $("#idDivMsj").empty();
+
+			var index = statusInsertar.indexOf(valor);
+            if (!(index > -1)) {
+				if (!e.checked && estaProgramada && (uno == "PRGM" || uno == "PRGE"))
+				{
+					if (idioma == CO_EN) {
+						MobileCRM.UI.MessageBox.sayText("Can´t desactivate a work orde programming.");
+					}
+					else {
+						MobileCRM.UI.MessageBox.sayText("No se puede desacticar una orden de trabajo programada.");                    
+					}
+					$(e).prop('checked', !$(e).prop('checked'));
+					return false;
+				}
+			}
+			if (fechasProgramacion == false && (uno == "PRGM" || uno == "PRGE")) {
+
+				if (idioma === CO_EN) {
+				  MobileCRM.UI.MessageBox.sayText("Status can be mark only if you has inital and end programing date.");
+				}
+				else {
+				  MobileCRM.UI.MessageBox.sayText("Status solamente puede fijarse si se tiene fecha de inicio y fin.");
+				}
+				$(e).prop('checked', !$(e).prop('checked'));
+				return false;
+			}
+			
+			
+            if (jefeParque == false && (uno == "PNLT" || uno == "NPNL" || uno == "NFACT" )) {
+
+                if (idioma == CO_EN) {
+                    MobileCRM.UI.MessageBox.sayText("Status can be mark only if you are Windfarm Head officer.");
+                }
+                else {
+                    MobileCRM.UI.MessageBox.sayText("Status solamente puede fijarse si es Jefe de Parque.");
+                }
+                $(e).prop('checked', !$(e).prop('checked'));
+                return false;
+            }
+			
+			
+			
+
+            $("#idDivMsj").val(varValor);
+
+            // if ( varCheck == true )
+            if (e.checked) {
+                // hay que añadirlo
+                generarElementosCambiados("I", valor)
+            }
+            // significa que es "false" y hay que quitarlo
+            else {
+                //hay que quitarlo
+                generarElementosCambiados("B", valor);
+            }
+            generarTextoStatusUsuario();
+            return;
+        }
+
+        // generamos el texto que se guardara el campo status de usuario del aviso
+        function generarTextoStatusUsuario() {
+            textoStatusUsuario = $("input[name=rd_Estado_Con_Clasif]:checked").attr("codigo");
+            $("input:checkbox:checked").each(function () {
+                textoStatusUsuario = textoStatusUsuario + " " + ($(this).attr("codigo"));
+            });
+        }
+
+        // generamos el array con los elementos que hay que borrar y crear de log de estado
+        function generarElementosCambiados(tipoOperacion, elemento) {
+
+            // si es un borrado
+            if (tipoOperacion == "B") {
+                // si se ha insertado anteriormente lo borro
+                var index = statusInsertar.indexOf(elemento);
+                if (index > -1) {
+                    statusInsertar.splice(index, 1);
+                }
+                // sino lo añado a borrar
+                else {
+                    statusBorrar.push(elemento);
+                }
+            }
+            if (tipoOperacion == "I") {
+                // si se ha borrado anteriormente lo borro
+                var index = statusBorrar.indexOf(elemento);
+                if (index > -1) {
+                    statusBorrar.splice(index, 1);
+                }
+                // sino lo añado a borrar
+                else {
+                    statusInsertar.push(elemento);
+                }
+            }
+        }
+
+    </script>
+</head>
+<body onload="FS.OrdenTrabajo.OrdenTrabajoOnLoad()">
+    <div id="idPrincipal">
+        <section>
+            <!--    Estado de USUARIO con número Clasif.    -->
+            <div>
+                <div style="margin-left: 0m;">
+
+                    <table id="tblNumClasificados" border="0">
+                        <tr id="cabecera">
+                            <th>Sel</th>
+                            <th>Nº</th>
+                            <th>Stat</th>
+                            <th style="width: 79%">Txt.status</th>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <!--    Estado de USUARIO sin número Clasif.    -->
+            <div style="margin-left: 0em;">
+                <div>
+                    <table id="tblSinNumClasificados" border="0">
+                        <tr id="Tr1">
+                            <th>Sel</th>
+                            <!--    <th>Nº</th> -->
+                            <th>Stat</th>
+                            <th style="width: 75%">Txt.status</th>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="alert-js-RefreshDialog-Footer" id="alertJs-tdDialogFooter">
+        <button id="btnSave" tabindex="1" type="button" class="alert-js-RefreshDialog-Button">OK</button>
+    </div>
+</body>
+</html>

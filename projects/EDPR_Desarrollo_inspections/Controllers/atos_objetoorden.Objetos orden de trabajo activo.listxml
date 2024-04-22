@@ -1,0 +1,81 @@
+﻿<EntityList>
+  <Attributes>
+    <EntityName>atos_objetoorden</EntityName>
+    <CamelCase>atos_objetoorden</CamelCase>
+  </Attributes>
+  <Name>Objetos orden de trabajo activo</Name>
+  <Kind>List</Kind>
+  <AutoWideWidth>0</AutoWideWidth>
+  <OrderBy>atos_name</OrderBy>
+  <SerializedBindings>
+    <string>atos_objetoordenid</string>
+    <string>atos_name</string>
+    <string>createdon</string>
+    <string>atos_ubicaciontecnicaid</string>
+    <string>atos_ordendetrabajoid</string>
+    <string>atos_materialid</string>
+    <string>atos_equipoid</string>
+    <string>atos_avisoid</string>
+  </SerializedBindings>
+  <MaxColumns>0</MaxColumns>
+  <Fetch version="1.0">
+    <entity name="atos_objetoorden">
+      <filter type="and">
+        <condition attribute="statecode" operator="eq" value="0"/>
+      </filter>
+    </entity>
+  </Fetch>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>240</DesignWidth>
+      <DesignHeight>40</DesignHeight>
+      <Name>Default</Name>
+      <Width>240</Width>
+      <Height>73</Height>
+      <SerializedChildren>
+        <CellTemplate SchemaName="atos_name">
+          <StyleName>primary</StyleName>
+          <Bounds>8,2,227,24</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="atos_materialid">
+          <StyleName>gray</StyleName>
+          <Bounds>8,26,90,11</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="atos_equipoid">
+          <StyleName>gray</StyleName>
+          <Bounds>98,26,137,11</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="atos_ubicaciontecnicaid">
+          <StyleName>gray</StyleName>
+          <Bounds>8,37,227,11</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="atos_avisoid">
+          <StyleName>gray</StyleName>
+          <Bounds>8,48,90,11</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="atos_ordendetrabajoid">
+          <StyleName>gray</StyleName>
+          <Bounds>98,48,137,11</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="createdon">
+          <StyleName>gray</StyleName>
+          <Bounds>8,59,227,11</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+</EntityList>

@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta charset="utf-8" />
+		<title>Check Stock</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="initial-scale=1, user-scalable=no" />
+		<script src="../../JSBridge.js"/>
+	</head>
+	<body>
+		<script>
+			
+			function onPostSave() {			
+				
+				var wait = MobileCRM.UI.EntityForm.showPleaseWait("Please wait…");
+				
+				MobileCRM.UI.EntityForm.onPostSave(
+					function (entityForm) {
+													
+						/// register event.
+						var entity = entityForm.entity;
+						var sapResponse = entity.edprdyn_sapresponse;
+						MobileCRM.bridge.alert("sapResponse: " + sapResponse);
+						var checkStockRef = new MobileCRM.Reference(entity.entityName, entity.id, entity.primaryName);
+						//var postSuspend = entityForm.suspendPostSave();
+						/// create associated contact.
+						//var contact = new MobileCRM.DynamicEntity.createNew("contact");
+						//contact.properties.lastname = "_child of " + checkStock.primaryName;
+						//contact.properties.parentcustomerid = checkStock;
+						//contact.save(
+						//	function (err) {
+						//		if (err)
+						//			MobileCRM.bridge.alert(err);
+						//		else {
+						//			postSuspend.resumePostSave();
+						//		}
+						//	}
+						//);
+						
+						wait.close(); // It is used to close the wait dialog
+					},
+					true,
+					MobileCRM.bridge.alert
+				);//onPostSave
+			}//function
+
+		</script>
+	</body>
+</html>

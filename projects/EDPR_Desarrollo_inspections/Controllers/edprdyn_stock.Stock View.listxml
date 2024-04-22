@@ -1,0 +1,55 @@
+﻿<EntityList>
+  <Attributes>
+    <EntityName>edprdyn_stock</EntityName>
+    <CamelCase>edprdyn_stock</CamelCase>
+  </Attributes>
+  <Name>Stock View</Name>
+  <Kind>List</Kind>
+  <AutoWideWidth>0</AutoWideWidth>
+  <OrderBy>edprdyn_name</OrderBy>
+  <SerializedBindings>
+    <string>edprdyn_material</string>
+    <string>edprdyn_name</string>
+    <string>edprdyn_stockid</string>
+    <string>edprdyn_storagebin</string>
+    <string>edprdyn_storagelocation</string>
+    <string>edprdyn_storagetype</string>
+    <string>edprdyn_totalquantity</string>
+  </SerializedBindings>
+  <MaxColumns>0</MaxColumns>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>320</DesignWidth>
+      <DesignHeight>48</DesignHeight>
+      <Name>Default</Name>
+      <Width>320</Width>
+      <Height>48</Height>
+      <SerializedChildren>
+        <CellTemplate SchemaName="edprdyn_material">
+          <StyleName>primary</StyleName>
+          <Bounds>10,2,302,28</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="edprdyn_storagebin">
+          <StyleName>gray</StyleName>
+          <Bounds>10,31,149,13</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="edprdyn_storagetype">
+          <StyleName>gray</StyleName>
+          <Bounds>160,31,64,13</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>8</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="edprdyn_storagelocation">
+          <StyleName>r_gray</StyleName>
+          <Bounds>224,31,89,13</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>8</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+</EntityList>

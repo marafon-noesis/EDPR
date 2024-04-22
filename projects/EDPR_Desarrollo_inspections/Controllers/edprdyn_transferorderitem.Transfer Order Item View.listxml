@@ -1,0 +1,54 @@
+﻿<EntityList>
+  <Attributes>
+    <EntityName>edprdyn_transferorderitem</EntityName>
+    <CamelCase>edprdyn_transferorderitem</CamelCase>
+  </Attributes>
+  <Name>Transfer Order Item View</Name>
+  <Kind>List</Kind>
+  <AutoWideWidth>0</AutoWideWidth>
+  <OrderBy>edprdyn_name</OrderBy>
+  <SerializedBindings>
+    <string>edprdyn_destinationstoragebin</string>
+    <string>edprdyn_name</string>
+    <string>edprdyn_product</string>
+    <string>edprdyn_sourcestoragebinother</string>
+    <string>edprdyn_transferorderitem</string>
+    <string>edprdyn_transferorderitemid</string>
+  </SerializedBindings>
+  <MaxColumns>0</MaxColumns>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>320</DesignWidth>
+      <DesignHeight>48</DesignHeight>
+      <Name>Default</Name>
+      <Width>320</Width>
+      <Height>48</Height>
+      <SerializedChildren>
+        <CellTemplate SchemaName="edprdyn_transferorderitem">
+          <StyleName>primary</StyleName>
+          <Bounds>10,2,302,28</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="edprdyn_product">
+          <StyleName>gray</StyleName>
+          <Bounds>10,31,149,13</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="edprdyn_sourcestoragebinother">
+          <StyleName>gray</StyleName>
+          <Bounds>160,31,64,13</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>8</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="edprdyn_destinationstoragebin">
+          <StyleName>r_gray</StyleName>
+          <Bounds>224,31,89,13</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>8</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+</EntityList>

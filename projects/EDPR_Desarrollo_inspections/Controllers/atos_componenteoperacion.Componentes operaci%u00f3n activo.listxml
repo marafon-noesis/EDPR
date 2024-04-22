@@ -1,0 +1,206 @@
+﻿<EntityList>
+  <Attributes>
+    <EntityName>atos_componenteoperacion</EntityName>
+    <CamelCase>atos_componenteoperacion</CamelCase>
+    <VisualStudioProjectId>00000000-0000-0000-0000-000000000000</VisualStudioProjectId>
+  </Attributes>
+  <Name>Componentes operación activo</Name>
+  <Kind>List</Kind>
+  <AutoWideWidth>0</AutoWideWidth>
+  <OrderBy>atos_name</OrderBy>
+  <MultiSelectCommands>custom_aprobar|custom_confirmacionComponentes||custom_cancelar|custom_cancelacionComponentes||custom_borrarComponentes|custom_borrarComponentes|</MultiSelectCommands>
+  <SharedVariables>&lt;SharedVariables&gt;&lt;Variables&gt;&lt;/Variables&gt;&lt;/SharedVariables&gt;</SharedVariables>
+  <SerializedBindings>
+    <string>atos_almacenid</string>
+    <string>atos_aniodocumentoconfirmacion</string>
+    <string>atos_flagcancelado</string>
+    <string>atos_cantidad</string>
+    <string>atos_cantidadadconfirmacion</string>
+    <string>atos_centrocomponenteid</string>
+    <string>atos_centroid</string>
+    <string>atos_centrodeplanificacionid</string>
+    <string>atos_componenteoperacionid</string>
+    <string>atos_descripcion</string>
+    <string>atos_documentodeconfirmacion</string>
+    <string>atos_enviarasap</string>
+    <string>atos_estadointegracionsap</string>
+    <string>atos_estatusconfirmacion</string>
+    <string>atos_fechacontabilidad</string>
+    <string>createdon</string>
+    <string>atos_grupodecomprasid</string>
+    <string>atos_materialid</string>
+    <string>atos_name</string>
+    <string>atos_operacionid</string>
+    <string>atos_ordendetrabajoid</string>
+    <string>atos_origen</string>
+    <string>atos_posicion</string>
+    <string>ownerid</string>
+    <string>atos_listadematerial</string>
+    <string>atos_unidademedidaid</string>
+  </SerializedBindings>
+  <MaxColumns>0</MaxColumns>
+  <TemplateSelectorRule>&lt;?xml version="1.0" ?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="11" version="0"&gt;&lt;branch e="true" info="" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="Or"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.atos_estadointegracionsap&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Picklist:2&lt;/arg&gt;&lt;/condition&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.atos_estadointegracionsap&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Picklist:3&lt;/arg&gt;&lt;/condition&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.atos_estadointegracionsap&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Picklist:5&lt;/arg&gt;&lt;/condition&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.atos_estadointegracionsap&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Picklist:6&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;TemplateIndex&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Integer:1&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;TemplateIndex&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Integer:0&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/Workflow&gt;</TemplateSelectorRule>
+  <IFrame>file://ComponenteOperacion/ComponenteOperacionList.html</IFrame>
+  <Fetch version="1.0">
+    <entity name="atos_componenteoperacion">
+      <filter type="and">
+        <condition attribute="statecode" operator="eq" value="0"/>
+      </filter>
+    </entity>
+  </Fetch>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>240</DesignWidth>
+      <DesignHeight>40</DesignHeight>
+      <Name>Default</Name>
+      <Width>240</Width>
+      <Height>95</Height>
+      <Buttons>none</Buttons>
+      <SerializedChildren>
+        <CellTemplate SchemaName="atos_posicion">
+          <StyleName>primary</StyleName>
+          <Bounds>8,2,227,24</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="atos_materialid">
+          <StyleName>gray</StyleName>
+          <Bounds>8,26,90,11</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="atos_cantidad">
+          <StyleName>gray</StyleName>
+          <Bounds>98,26,137,11</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="atos_listadematerial">
+          <StyleName>gray</StyleName>
+          <Bounds>8,37,90,11</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="atos_almacenid">
+          <StyleName>gray</StyleName>
+          <Bounds>98,37,137,11</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="atos_centrodeplanificacionid">
+          <StyleName>gray</StyleName>
+          <Bounds>8,48,90,11</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="atos_descripcion">
+          <StyleName>gray</StyleName>
+          <Bounds>98,48,137,11</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="atos_operacionid">
+          <StyleName>gray</StyleName>
+          <Bounds>8,59,90,11</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="atos_ordendetrabajoid">
+          <StyleName>gray</StyleName>
+          <Bounds>98,59,137,11</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="createdon">
+          <StyleName>gray</StyleName>
+          <Bounds>8,70,227,11</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="atos_name">
+          <StyleName>gray</StyleName>
+          <Bounds>8,81,227,11</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+    <RowTemplate>
+      <DesignWidth>240</DesignWidth>
+      <DesignHeight>40</DesignHeight>
+      <Name>Sync error</Name>
+      <Width>240</Width>
+      <Height>95</Height>
+      <SerializedBackground>-20383</SerializedBackground>
+      <SerializedChildren>
+        <CellTemplate SchemaName="atos_posicion">
+          <StyleName>primary</StyleName>
+          <Bounds>8,2,227,24</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="atos_materialid">
+          <StyleName>gray</StyleName>
+          <Bounds>8,26,90,11</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="atos_cantidad">
+          <StyleName>gray</StyleName>
+          <Bounds>98,26,137,11</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="atos_listadematerial">
+          <StyleName>gray</StyleName>
+          <Bounds>8,37,90,11</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="atos_almacenid">
+          <StyleName>gray</StyleName>
+          <Bounds>98,37,137,11</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="atos_centrodeplanificacionid">
+          <StyleName>gray</StyleName>
+          <Bounds>8,48,90,11</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="atos_descripcion">
+          <StyleName>gray</StyleName>
+          <Bounds>98,48,137,11</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="atos_operacionid">
+          <StyleName>gray</StyleName>
+          <Bounds>8,59,90,11</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="atos_ordendetrabajoid">
+          <StyleName>gray</StyleName>
+          <Bounds>98,59,137,11</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="createdon">
+          <StyleName>gray</StyleName>
+          <Bounds>8,70,227,11</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="atos_name">
+          <StyleName>gray</StyleName>
+          <Bounds>8,81,227,11</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+  <CustomProperties/>
+</EntityList>

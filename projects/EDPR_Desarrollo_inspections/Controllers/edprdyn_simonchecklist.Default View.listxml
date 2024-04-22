@@ -1,0 +1,55 @@
+﻿<EntityList>
+  <Attributes>
+    <EntityName>edprdyn_simonchecklist</EntityName>
+    <CamelCase>edprdyn_simonchecklist</CamelCase>
+  </Attributes>
+  <Name>Default View</Name>
+  <Kind>List</Kind>
+  <AutoWideWidth>0</AutoWideWidth>
+  <OrderBy>edprdyn_name</OrderBy>
+  <SerializedBindings>
+    <string>edprdyn_checklistcode</string>
+    <string>edprdyn_checklistobligatorio</string>
+    <string>edprdyn_checklistrescoid</string>
+    <string>edprdyn_descripcion</string>
+    <string>edprdyn_documento</string>
+    <string>edprdyn_name</string>
+    <string>edprdyn_simonchecklistid</string>
+  </SerializedBindings>
+  <MaxColumns>0</MaxColumns>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>320</DesignWidth>
+      <DesignHeight>48</DesignHeight>
+      <Name>Default</Name>
+      <Width>320</Width>
+      <Height>48</Height>
+      <SerializedChildren>
+        <CellTemplate SchemaName="edprdyn_checklistcode">
+          <StyleName>primary</StyleName>
+          <Bounds>0,0,219,20</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="edprdyn_checklistrescoid">
+          <StyleName>gray</StyleName>
+          <Bounds>0,27,158,20</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="edprdyn_checklistobligatorio">
+          <StyleName>primary</StyleName>
+          <Bounds>224,0,96,20</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="edprdyn_documento">
+          <StyleName>gray</StyleName>
+          <Bounds>162,27,158,20</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+</EntityList>

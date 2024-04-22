@@ -1,0 +1,146 @@
+﻿<EntityList>
+  <Attributes>
+    <EntityName>atos_aviso</EntityName>
+    <CamelCase>atos_aviso</CamelCase>
+    <VisualStudioProjectId>00000000-0000-0000-0000-000000000000</VisualStudioProjectId>
+    <ClassBinding/>
+  </Attributes>
+  <Name>Avisos Activos</Name>
+  <Kind>List</Kind>
+  <IsDefault>true</IsDefault>
+  <AutoWideWidth>0</AutoWideWidth>
+  <OrderBy>!atos_name;atos_ubicaciontecnicaid</OrderBy>
+  <SharedVariables>&lt;SharedVariables&gt;&lt;Variables&gt;&lt;/Variables&gt;&lt;/SharedVariables&gt;</SharedVariables>
+  <SerializedBindings>
+    <string>atos_avisoid</string>
+    <string>atos_centroid</string>
+    <string>atos_centrodeplanificacinid</string>
+    <string>atos_clasedeavisoid</string>
+    <string>atos_name</string>
+    <string>atos_codigosap</string>
+    <string>atos_descripcionut</string>
+    <string>atos_equipoid</string>
+    <string>atos_esprincipal</string>
+    <string>atos_estadousuario</string>
+    <string>atos_estadosintegracionsap</string>
+    <string>statuscode</string>
+    <string>atos_fechafinaveria</string>
+    <string>atos_fechainicioaveria</string>
+    <string>atos_fechanotificacion</string>
+    <string>atos_ordendetrabajoid</string>
+    <string>atos_esplantilla</string>
+    <string>atos_prioridadid</string>
+    <string>atos_descripcioncorta</string>
+    <string>atos_ubicaciontecnicaid</string>
+  </SerializedBindings>
+  <MaxColumns>0</MaxColumns>
+  <TemplateSelectorRule>&lt;?xml version="1.0" ?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="11" version="0"&gt;&lt;branch e="true" info="" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.atos_estadosintegracionsap&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Picklist:5&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;TemplateIndex&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Integer:1&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;TemplateIndex&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Integer:0&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/Workflow&gt;</TemplateSelectorRule>
+  <Fetch version="1.0">
+    <entity name="atos_aviso">
+      <filter type="and">
+        <condition attribute="statuscode" operator="ne" value="300000002"/>
+        <condition attribute="statecode" operator="eq" value="0"/>
+      </filter>
+    </entity>
+  </Fetch>
+  <Search>
+    <attribute schema="atos_codigosap" method="Contains"/>
+    <attribute schema="atos_descripcioncorta" method="Contains"/>
+    <attribute schema="atos_name" method="Contains"/>
+    <attribute schema="atos_ubicaciontecnicaid" method="Contains" reference="true"/>
+  </Search>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>240</DesignWidth>
+      <DesignHeight>40</DesignHeight>
+      <Name>Default</Name>
+      <Width>240</Width>
+      <Height>71</Height>
+      <SerializedChildren>
+        <CellTemplate SchemaName="atos_name">
+          <StyleName>primary</StyleName>
+          <Bounds>8,1,107,24</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="atos_descripcioncorta">
+          <StyleName>gray</StyleName>
+          <Bounds>8,26,227,11</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="atos_ubicaciontecnicaid">
+          <StyleName>gray</StyleName>
+          <Bounds>8,37,227,11</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="atos_fechainicioaveria">
+          <StyleName>gray</StyleName>
+          <Bounds>8,48,227,11</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="atos_codigosap">
+          <StyleName>primary</StyleName>
+          <Bounds>115,1,119,24</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="atos_clasedeavisoid">
+          <StyleName>gray</StyleName>
+          <Bounds>8,59,227,11</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+    <RowTemplate>
+      <DesignWidth>240</DesignWidth>
+      <DesignHeight>40</DesignHeight>
+      <Name>Syn errors</Name>
+      <Width>240</Width>
+      <Height>71</Height>
+      <SerializedBackground>-20383</SerializedBackground>
+      <SerializedChildren>
+        <CellTemplate SchemaName="atos_name">
+          <StyleName>primary</StyleName>
+          <Bounds>8,1,107,24</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="atos_descripcioncorta">
+          <StyleName>gray</StyleName>
+          <Bounds>8,26,227,11</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="atos_ubicaciontecnicaid">
+          <StyleName>gray</StyleName>
+          <Bounds>8,37,227,11</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="atos_fechainicioaveria">
+          <StyleName>gray</StyleName>
+          <Bounds>8,48,227,11</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="atos_codigosap">
+          <StyleName>primary</StyleName>
+          <Bounds>115,1,119,24</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="atos_clasedeavisoid">
+          <StyleName>gray</StyleName>
+          <Bounds>8,59,227,11</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+  <CustomProperties/>
+</EntityList>

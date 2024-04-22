@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta charset="utf-8" />
+		<title>Inventory Document</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="initial-scale=1, user-scalable=no" />
+		<script src="../../JSBridge.js"></script>
+	</head>
+	<body onload="onLoad()">
+		<script>
+			function onLoad() {
+			//-----------------------------------
+            try {
+
+                MobileCRM.UI.EntityForm.onCommand("custom_ConfirmToSAP",
+                    function (entityForm) {
+                        if (entityForm) {
+
+                            //MobileCRM.bridge.alert("custom_ConfirmToSAP");
+                            MobileCRM.UI.EntityForm.saveAndClose();
+                            var to= entityForm.entity;
+                            var c_to = to;
+                            c_to.save(
+                                function (error) {
+                                    if (error) {
+                                        MobileCRM.bridge.alert("An error occurred: " + error);
+									}
+                                    else {
+                                        // callback is called in scope of newly created MobileCRM.DynamicEntity object; thus we can access the data using "this" keyword
+                                        var newId = this.id;
+                                        //var allProps = this.properties;
+                                        //rememberNewAccount(newId, allProps.name);
+                                        MobileCRM.bridge.alert("Created");
+                                    }
+                                }
+                                , true);
+                        }
+                    }
+                );
+            }
+            catch (e) {
+                throw new MobileCrmException("custom_ConfirmToSAP" + e.message);
+            }
+			//-----------------------------------
+		}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,71 @@
+﻿<EntityList>
+  <Attributes>
+    <EntityName>edprdyn_turbineentranceandexit</EntityName>
+    <CamelCase>edprdyn_turbineentranceandexit</CamelCase>
+  </Attributes>
+  <Name>Turbine Entrances and Exits</Name>
+  <Kind>List</Kind>
+  <AutoWideWidth>0</AutoWideWidth>
+  <OrderBy>edprdyn_name</OrderBy>
+  <SerializedBindings>
+    <string>edprdyn_email</string>
+    <string>createdby</string>
+    <string>edprdyn_notification</string>
+    <string>edprdyn_turbineentranceandexitid</string>
+    <string>createdon</string>
+    <string>edprdyn_name</string>
+    <string>edprdyn_workorder</string>
+    <string>ownerid</string>
+    <string>edprdyn_type</string>
+    <string>edprdyn_turbine</string>
+    <string>edprdyn_account</string>
+  </SerializedBindings>
+  <MaxColumns>0</MaxColumns>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>320</DesignWidth>
+      <DesignHeight>48</DesignHeight>
+      <Name>Default</Name>
+      <Width>320</Width>
+      <Height>48</Height>
+      <SerializedChildren>
+        <CellTemplate SchemaName="edprdyn_account">
+          <StyleName>primary</StyleName>
+          <Bounds>9,2,100,28</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="edprdyn_type">
+          <StyleName>gray</StyleName>
+          <Bounds>9,31,100,13</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="createdon">
+          <StyleName>gray</StyleName>
+          <Bounds>110,31,101,13</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>8</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="createdby">
+          <StyleName>gray</StyleName>
+          <Bounds>212,31,100,13</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>8</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="edprdyn_workorder">
+          <StyleName>primary</StyleName>
+          <Bounds>212,2,100,28</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="edprdyn_notification">
+          <StyleName>primary</StyleName>
+          <Bounds>110,2,101,28</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+</EntityList>

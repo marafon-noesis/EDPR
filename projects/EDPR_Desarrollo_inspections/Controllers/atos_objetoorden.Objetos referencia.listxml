@@ -1,0 +1,68 @@
+﻿<EntityList>
+  <Attributes>
+    <EntityName>atos_objetoorden</EntityName>
+    <CamelCase>atos_objetoorden</CamelCase>
+    <VisualStudioProjectId>00000000-0000-0000-0000-000000000000</VisualStudioProjectId>
+  </Attributes>
+  <Name>Objetos referencia</Name>
+  <Kind>List</Kind>
+  <AutoWideWidth>0</AutoWideWidth>
+  <OrderBy>atos_ubicaciontecnicaid</OrderBy>
+  <SerializedBindings>
+    <string>atos_equipoid</string>
+    <string>atos_materialid</string>
+    <string>atos_numerodeserie</string>
+    <string>atos_objetoordenid</string>
+    <string>atos_ubicaciontecnicaid</string>
+    <string>atos_ubicaciontecnicaid.account.description</string>
+  </SerializedBindings>
+  <MaxColumns>0</MaxColumns>
+  <Fetch version="1.0">
+    <entity name="atos_objetoorden">
+      <filter type="and">
+        <condition attribute="atos_indicadordeborrado" operator="eq" value="0"/>
+        <condition attribute="atos_avisoid" operator="null"/>
+        <filter type="or">
+          <condition attribute="atos_equipoid" operator="not-null"/>
+          <condition attribute="atos_ubicaciontecnicaid" operator="not-null"/>
+          <condition attribute="atos_materialid" operator="not-null"/>
+        </filter>
+      </filter>
+    </entity>
+  </Fetch>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>320</DesignWidth>
+      <DesignHeight>48</DesignHeight>
+      <Name>Default</Name>
+      <Width>320</Width>
+      <Height>52</Height>
+      <SerializedChildren>
+        <CellTemplate SchemaName="atos_ubicaciontecnicaid">
+          <StyleName>gray</StyleName>
+          <Bounds>10,2,302,10</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="atos_equipoid">
+          <StyleName>gray</StyleName>
+          <Bounds>10,15,302,10</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="atos_materialid">
+          <StyleName>gray</StyleName>
+          <Bounds>10,28,302,10</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="atos_numerodeserie">
+          <StyleName>gray</StyleName>
+          <Bounds>10,40,302,10</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+</EntityList>
